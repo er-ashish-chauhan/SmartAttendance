@@ -1,3 +1,3 @@
 export default { 
-    // userImage: require("../assets/images")
+    calendar: require("../assets/images/calendar.png")
 }

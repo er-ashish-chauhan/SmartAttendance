@@ -14,6 +14,16 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-SmartAttendance-SmartAttendanceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SmartAttendance-SmartAttendanceTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		2725E1441F6F451582BCA564 /* HelveticaNeue-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A1CF0BE132E41B7828636A2 /* HelveticaNeue-Bold.otf */; };
+		A605A8ACCDFB4C0E81F46923 /* HelveticaNeue-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A689FC553B1A4AEFB4631EF5 /* HelveticaNeue-Light.otf */; };
+		5FD253381F564786AD42B6C9 /* HelveticaNeue-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 680C9BC39CBA46129DECE8C1 /* HelveticaNeue-Medium.otf */; };
+		D1D4FDDB47B641B6AF8020D4 /* HelveticaNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D46C2786BC2042D381094671 /* HelveticaNeue-Regular.otf */; };
+		32338CE3D764425898D7EF2F /* HelveticaNeue-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD80FCD7B8E044EA89793066 /* HelveticaNeue-RegularItalic.otf */; };
+		F2D0CE9E65344895968656D4 /* HelveticaNeue-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 071B6DBFBE1447899543C1B6 /* HelveticaNeue-Thin.otf */; };
+		037AC82BFD4E4294AAE483F6 /* HelveticaNeue-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B14629F7A82540AF9E04BC24 /* HelveticaNeue-Ultralight.otf */; };
+		11BF42DC9FBB4E78BCD94D93 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = F78560789E694596930BEB0D /* index.js */; };
+		CC55B5B2C3B94BFCA9B63F6F /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = F0B35D8B4F0E40779DEC255B /* calendar.png */; };
+		7A0F32184FF741FEAE6B5079 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = B0B2AEB956C541A0B0265D5B /* index.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,16 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SmartAttendance/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SmartAttendance-SmartAttendanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartAttendance-SmartAttendanceTests.release.xcconfig"; path = "Target Support Files/Pods-SmartAttendance-SmartAttendanceTests/Pods-SmartAttendance-SmartAttendanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7A1CF0BE132E41B7828636A2 /* HelveticaNeue-Bold.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Bold.otf"; path = "../src/assets/fonts/HelveticaNeue-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A689FC553B1A4AEFB4631EF5 /* HelveticaNeue-Light.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Light.otf"; path = "../src/assets/fonts/HelveticaNeue-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		680C9BC39CBA46129DECE8C1 /* HelveticaNeue-Medium.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Medium.otf"; path = "../src/assets/fonts/HelveticaNeue-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D46C2786BC2042D381094671 /* HelveticaNeue-Regular.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Regular.otf"; path = "../src/assets/fonts/HelveticaNeue-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BD80FCD7B8E044EA89793066 /* HelveticaNeue-RegularItalic.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-RegularItalic.otf"; path = "../src/assets/fonts/HelveticaNeue-RegularItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		071B6DBFBE1447899543C1B6 /* HelveticaNeue-Thin.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Thin.otf"; path = "../src/assets/fonts/HelveticaNeue-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B14629F7A82540AF9E04BC24 /* HelveticaNeue-Ultralight.otf */ = {isa = PBXFileReference; name = "HelveticaNeue-Ultralight.otf"; path = "../src/assets/fonts/HelveticaNeue-Ultralight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F78560789E694596930BEB0D /* index.js */ = {isa = PBXFileReference; name = "index.js"; path = "../src/assets/fonts/index.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0B35D8B4F0E40779DEC255B /* calendar.png */ = {isa = PBXFileReference; name = "calendar.png"; path = "../src/assets/images/calendar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0B2AEB956C541A0B0265D5B /* index.js */ = {isa = PBXFileReference; name = "index.js"; path = "../src/assets/images/index.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +142,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				282FB482C58F44EAA67F8609 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +168,24 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		282FB482C58F44EAA67F8609 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				7A1CF0BE132E41B7828636A2 /* HelveticaNeue-Bold.otf */,
+				A689FC553B1A4AEFB4631EF5 /* HelveticaNeue-Light.otf */,
+				680C9BC39CBA46129DECE8C1 /* HelveticaNeue-Medium.otf */,
+				D46C2786BC2042D381094671 /* HelveticaNeue-Regular.otf */,
+				BD80FCD7B8E044EA89793066 /* HelveticaNeue-RegularItalic.otf */,
+				071B6DBFBE1447899543C1B6 /* HelveticaNeue-Thin.otf */,
+				B14629F7A82540AF9E04BC24 /* HelveticaNeue-Ultralight.otf */,
+				F78560789E694596930BEB0D /* index.js */,
+				F0B35D8B4F0E40779DEC255B /* calendar.png */,
+				B0B2AEB956C541A0B0265D5B /* index.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +283,16 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2725E1441F6F451582BCA564 /* HelveticaNeue-Bold.otf in Resources */,
+				A605A8ACCDFB4C0E81F46923 /* HelveticaNeue-Light.otf in Resources */,
+				5FD253381F564786AD42B6C9 /* HelveticaNeue-Medium.otf in Resources */,
+				D1D4FDDB47B641B6AF8020D4 /* HelveticaNeue-Regular.otf in Resources */,
+				32338CE3D764425898D7EF2F /* HelveticaNeue-RegularItalic.otf in Resources */,
+				F2D0CE9E65344895968656D4 /* HelveticaNeue-Thin.otf in Resources */,
+				037AC82BFD4E4294AAE483F6 /* HelveticaNeue-Ultralight.otf in Resources */,
+				11BF42DC9FBB4E78BCD94D93 /* index.js in Resources */,
+				CC55B5B2C3B94BFCA9B63F6F /* calendar.png in Resources */,
+				7A0F32184FF741FEAE6B5079 /* index.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

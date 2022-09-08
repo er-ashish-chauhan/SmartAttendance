@@ -1,7 +1,8 @@
 export const fonts = {
-    Bold: "CentraleSans-Bold",
-    Medium: "CentraleSans-Medium",
-    Light: "CentraleSans-Light",
-    SemiBold: "CentraleSans-Book",
-    Thin: "CentraleSans-Thin"
+    Bold: "HelveticaNeue-Bold",
+    Medium: "HelveticaNeue-Medium",
+    Light: "HelveticaNeue-Light",
+    Regular: "HelveticaNeue-Regular",
+    Thin: "HelveticaNeue-Thin",
+    UltraLight: "HelveticaNeue-Ultralight"
 }

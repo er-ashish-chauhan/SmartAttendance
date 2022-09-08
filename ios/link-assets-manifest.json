@@ -1,0 +1,45 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Bold.otf",
+      "sha1": "f4666319f383c853f0efda9add9ea4eb326ae91c"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Light.otf",
+      "sha1": "4923aa3ecf6cce3169b9abc805aa5994be2a2c3b"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Medium.otf",
+      "sha1": "6831cdc8e512dfa57c22aa0c3615231739cf8921"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Regular.otf",
+      "sha1": "ff8a992241e8fdf247971163323c066d6b5ea091"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-RegularItalic.otf",
+      "sha1": "33aa79b39cabd93a92dafd98769b8f0c23f6284a"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Thin.otf",
+      "sha1": "fb6d01debc693b867f1334e9e839a5a36d86d604"
+    },
+    {
+      "path": "src/assets/fonts/HelveticaNeue-Ultralight.otf",
+      "sha1": "c3d1da783e6431f0374af5f317980a499c66304e"
+    },
+    {
+      "path": "src/assets/fonts/index.js",
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/assets/images/calendar.png",
+      "sha1": "17d85bb01a427536d81f38dd6cec2d8c12feab88"
+    },
+    {
+      "path": "src/assets/images/index.js",
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    }
+  ]
+}
