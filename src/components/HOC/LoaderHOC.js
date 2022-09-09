@@ -15,9 +15,9 @@ const LoaderHOC = ({
 );
 
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
-        loading: state.common.loading
+        // loading: state.common.loading
     }
 };
 export default connect(mapStateToProps)(LoaderHOC);

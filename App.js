@@ -7,8 +7,11 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import LoaderHOC from './src/components/HOC/LoaderHOC';
 import Navigation from './src/navigations';
+import { persistor, store } from './src/store/Appstore';
 
 
 const App = () => {
@@ -19,14 +22,24 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    
       <View style={{ flex: 1 }}>
         <LoaderHOC>
           <Navigation />
         </LoaderHOC>
       </View>
-    </SafeAreaView>
   );
 };
 
-export default App;
+const AppWrapper = () => {
+
+  return (
+      <Provider store={store}>
+          <PersistGate persistor={persistor}>
+              <App />
+          </PersistGate>
+      </Provider>
+  )
+}
+
+export default AppWrapper;

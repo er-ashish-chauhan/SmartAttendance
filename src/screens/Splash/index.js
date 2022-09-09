@@ -7,12 +7,17 @@ import {
 const SplashScreen = ({
     navigation
 }) => {
-    <View style={{
-        justifyContent: "center",
-        alignItems: "center"
-    }}>
-        <Text>Here! You're on splash</Text>
-    </View>
+    return (
+        <View style={{
+           alignItems: "center",
+           justifyContent: "center"
+        }}>
+            <Text style={{
+                fontWeight: "600",
+                fontSize: 17
+            }}>Here! You're on splash</Text>
+        </View>
+    )
 }
 
 export default SplashScreen;

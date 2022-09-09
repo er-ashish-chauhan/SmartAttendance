@@ -4,28 +4,35 @@ import {
     Text
 } from "react-native";
 
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import SplashScreen from "../screens/Splash";
 import LoginScreen from "../screens/Login";
+import SignUp from "../screens/Signup";
 
 const Stack = createStackNavigator();
 
 export default StackNavigator = () => {
 
-    const userData = false;
+    const userData = true;
 
 
     return (
         <Stack.Navigator
+            initialRouteName="Login"
             screenOptions={{
                 gestureDirection: "horizontal",
-                headerMode: "screen",
-                headerShown: false
+                // ...TransitionPresets.SlideFromRightIOS,
+                // headerMode: "screen",
+                
+                  headerShown: false,
             }}>
             {userData ? (
                 <>
-                    <Stack.Screen name="Splash" component={SplashScreen} />
+                    <Stack.Screen 
+                    name="Splash" 
+                    component={SplashScreen} />
                     <Stack.Screen name="Login" component={LoginScreen} />
+                    <Stack.Screen name="Signup" component={SignUp} />
                 </>
             ) : (
                 <>

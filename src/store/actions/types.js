@@ -1,0 +1,5 @@
+
+export const LOGIN="LOGIN";
+export const LOGIN_SUCCESS="LOGIN_SUCCESS";
+export const STORE_TOKEN="STORE_TOKEN";
+export const USER_AUTHENTICATE="USER_AUTHENTICATE"

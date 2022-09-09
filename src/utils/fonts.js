@@ -1,4 +1,4 @@
-export const fonts = {
+ const fonts = {
     Bold: "HelveticaNeue-Bold",
     Medium: "HelveticaNeue-Medium",
     Light: "HelveticaNeue-Light",
@@ -6,3 +6,4 @@ export const fonts = {
     Thin: "HelveticaNeue-Thin",
     UltraLight: "HelveticaNeue-Ultralight"
 }
+export default fonts

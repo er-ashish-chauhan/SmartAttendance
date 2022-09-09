@@ -1,9 +1,9 @@
-export default {
+const colors = {
     black: '#000',
     bodyBlack: '#101418',
     white: '#fff',
     light: '#f0f0f0',
-
+    lightblue:'#007CFF',
     // themeColor: "#da2a1c",
     themeColor: "rgb(20,116,164)",
     red_e2211c: "#e2211c",
@@ -52,3 +52,4 @@ export default {
     buttonBGColor: "#1474A4",
     buttonBGColorDisabled: "rgba(20,116,164,0.4)"
 };
+export default colors
