@@ -5,6 +5,7 @@ import {normalize} from '../../utils/normalizeHeightwidth';
 
 export const styles = StyleSheet.create({
   loginview: {
+    marginTop: normalize(70),
     backgroundColor: colors.lightblue,
     flex: 1,
     borderRadius: 30,
@@ -32,46 +33,19 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.white,
     borderRadius: 30,
-    marginTop: 20,
+    marginTop: 35,
   },
   bluecircle: {
     height: 40,
     width: 40,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: colors.lightblue,
+borderColor:colors.lightblue,
     backgroundColor: colors.lightblue,
     marginLeft: 100,
     alignItems: 'center',
     padding: 6,
   },
-  imagecontainer: {
-    height: 72,
-    width: 72,
-    borderRadius: 36,
-    borderWidth: 1,
-    borderColor: colors.lightblue,
-    backgroundColor: '#ffff',
-    alignItems: 'center',
-    marginTop: -50,
-    alignSelf: 'center',
-    padding: 2,
-  },
-  cameracontainer:{
-height:normalize(24),
-width:normalize(24),
-borderRadius:normalize(12),
-borderWidth: 1,
-borderColor: colors.lightblue,
-backgroundColor: '#ffff',
-alignItems: 'center',
-position:"absolute",
-alignSelf:"center",
-top:normalize(28),
-padding:2,
-left:normalize(200)
-  }
-,
   dots: {
     backgroundColor: colors.black,
     height: 4,

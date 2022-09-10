@@ -38,8 +38,16 @@
       "sha1": "17d85bb01a427536d81f38dd6cec2d8c12feab88"
     },
     {
+      "path": "src/assets/images/camera.png",
+      "sha1": "de36884b62ea992ef688f3a3c04a9877d8ae842c"
+    },
+    {
       "path": "src/assets/images/hidden_eyes.png",
       "sha1": "9f652085f37fbf0f843f35ecede666821d4cc271"
+    },
+    {
+      "path": "src/assets/images/rightborderblue.png",
+      "sha1": "477b26e3f35345a226df421ca8729ac57c5778d4"
     },
     {
       "path": "src/assets/images/show_eyes.png",
@@ -48,6 +56,10 @@
     {
       "path": "src/assets/images/smallbluebox.png",
       "sha1": "48b07229ae661eb60f0bc6097c0747f49351890e"
+    },
+    {
+      "path": "src/assets/images/user.png",
+      "sha1": "1a684b5c4a63fadee1001df0bed4928f0106698f"
     }
   ]
 }

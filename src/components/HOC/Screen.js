@@ -30,27 +30,34 @@ const ScreenHOC = ({
     changeFilter,
     showFilter,
     rightText,
-    backIcon,
+    backIcon=true,
     navigation,
     languageHandler = "",
     showLanguageDropdown = false,
     defaultLanguage = "",
     leftblueimage,
-    rightblueimage,
+    rightblueimage=false,
     showcalenderimage=true,
     showrightbluebox=false,
-    calendartext="Smart Attendance"
+    title=true,
+    calendartext="Smart Attendance",
+    backloginIcon=false,
+    backnavigation
 }) => {
     const [stateChange, setStateChanged] = useState(false);
 
 
     return (
         <View style={{ flex: 1, backgroundColor: colors.light, }}>
-     
+            <View style={{flexDirection:"row",justifyContent:"space-between"}}>
+    { backIcon && <TouchableOpacity onPress={backnavigation}><Image source={images.leftarrow} style={{ marginTop:normalize(50),marginLeft:normalize(24)}}></Image></TouchableOpacity>}
+     {backloginIcon &&<TouchableOpacity onPress={backnavigation}><Image source={images.loginleftarrow} style={{ marginTop:normalize(50),marginLeft:normalize(24)}}></Image></TouchableOpacity>}
             {leftblueimage && <Image source={images.lightblueborder} style={{alignSelf:"flex-start",height:normalize(100),width:normalize(90)}}></Image>}
+            {rightblueimage && <Image source={images.rightblueborder} style={{alignSelf:"flex-end",height:normalize(80),width:normalize(70),position:"relative"}}></Image>}
+          </View>
             <View style={{flexDirection:"column",justifyContent:"space-between"}}>
             {showcalenderimage && <Image source={images.calendar} style={{height:normalize(114),width:normalize(114),alignItems:"center",marginLeft:normalize(131)}}/>}
-            <Text style={{alignSelf:"center",marginTop:normalize(17),fontFamily:fonts.Bold,fontSize:22}}>{calendartext}</Text>
+            {title &&<Text style={{alignSelf:"center",marginTop:normalize(17),fontFamily:fonts.Bold,fontSize:22}}>{calendartext}</Text>}
             {/* {showrightbluebox&& <Image source={images.smallbluebox} style={{alignSelf:"flex-end",marginTop:90}}/> } */}
             
             </View>

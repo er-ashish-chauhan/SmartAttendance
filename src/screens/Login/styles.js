@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 30,
     padding: 30,
+
   },
   logintext: {
     fontFamily: fonts.Thin,

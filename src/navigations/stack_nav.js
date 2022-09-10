@@ -8,6 +8,9 @@ import { createStackNavigator, TransitionPresets } from '@react-navigation/stack
 import SplashScreen from "../screens/Splash";
 import LoginScreen from "../screens/Login";
 import SignUp from "../screens/Signup";
+import Register from "../screens/RegisterDetails";
+import Forgotpassword from "../screens/Forgotpassword";
+import Resetpassword from "../screens/Resetpassword"
 
 const Stack = createStackNavigator();
 
@@ -33,6 +36,9 @@ export default StackNavigator = () => {
                     component={SplashScreen} />
                     <Stack.Screen name="Login" component={LoginScreen} />
                     <Stack.Screen name="Signup" component={SignUp} />
+                    <Stack.Screen name="Register" component={Register} />
+                    <Stack.Screen name="Forgotpassword" component={Forgotpassword} />
+                    <Stack.Screen name="Resetpassword" component={Resetpassword} />
                 </>
             ) : (
                 <>

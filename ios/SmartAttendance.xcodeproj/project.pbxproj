@@ -26,6 +26,9 @@
 		CC55B5B2C3B94BFCA9B63F6F /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = F0B35D8B4F0E40779DEC255B /* calendar.png */; };
 		D1D4FDDB47B641B6AF8020D4 /* HelveticaNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D46C2786BC2042D381094671 /* HelveticaNeue-Regular.otf */; };
 		F2D0CE9E65344895968656D4 /* HelveticaNeue-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 071B6DBFBE1447899543C1B6 /* HelveticaNeue-Thin.otf */; };
+		A0C87CF8E9CB4830BD2519BD /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 786D4E1181CE4715A39AB962 /* camera.png */; };
+		C1419CFBABA546D582F97C2D /* rightborderblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5391FEEFF8634DDAAF18F2FA /* rightborderblue.png */; };
+		FBD32525F1AD463689BD70CB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 748FA8941E8841F0B1279A93 /* user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F0B35D8B4F0E40779DEC255B /* calendar.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = calendar.png; path = ../src/assets/images/calendar.png; sourceTree = "<group>"; };
 		FA93685B10AA4EEF9316CED9 /* show_eyes.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = show_eyes.png; path = ../src/assets/images/show_eyes.png; sourceTree = "<group>"; };
+		786D4E1181CE4715A39AB962 /* camera.png */ = {isa = PBXFileReference; name = "camera.png"; path = "../src/assets/images/camera.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5391FEEFF8634DDAAF18F2FA /* rightborderblue.png */ = {isa = PBXFileReference; name = "rightborderblue.png"; path = "../src/assets/images/rightborderblue.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		748FA8941E8841F0B1279A93 /* user.png */ = {isa = PBXFileReference; name = "user.png"; path = "../src/assets/images/user.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,9 @@
 				7897052CBA9C4AFF9E16D18C /* hidden_eyes.png */,
 				FA93685B10AA4EEF9316CED9 /* show_eyes.png */,
 				BFB0683ED6764F1EAAE3F7C4 /* smallbluebox.png */,
+				786D4E1181CE4715A39AB962 /* camera.png */,
+				5391FEEFF8634DDAAF18F2FA /* rightborderblue.png */,
+				748FA8941E8841F0B1279A93 /* user.png */,
 			);
 			name = Resources;
 			path = "";
@@ -301,6 +310,9 @@
 				1A7CD0E19C8149369E0BE662 /* hidden_eyes.png in Resources */,
 				899E64F61D6247FFA5A844C4 /* show_eyes.png in Resources */,
 				19780E5D9A504CABA3CF6218 /* smallbluebox.png in Resources */,
+				A0C87CF8E9CB4830BD2519BD /* camera.png in Resources */,
+				C1419CFBABA546D582F97C2D /* rightborderblue.png in Resources */,
+				FBD32525F1AD463689BD70CB /* user.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

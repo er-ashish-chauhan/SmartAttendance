@@ -8,41 +8,50 @@ const SignUp = ({navigation}) => {
   const onchangemail = text => {
     setEmail(text);
   };
-  return (
-    <ScreenHOC leftblueimage={true}>
-      <View style={{flexDirection: 'row', marginTop: 38}}>
-        <View style={styles.bluecircle}>
-          <Text style={{color: '#ffff', fontSize: 18, alignSelf: 'center'}}>
-            01
-          </Text>
-        </View>
 
-        <View style={styles.dots}></View>
-        <View style={styles.linebtwcircles}></View>
-        <View style={[styles.dots, {marginLeft: 0}]} />
-        <View
-          style={[
-            styles.bluecircle,
-            {
-              backgroundColor: 'white',
-              marginLeft: 10,
-              borderColor: colors.lightblue,
-            },
-          ]}>
-          <Text
-            style={{
-              color: colors.lightblue,
-              fontSize: 18,
-              alignSelf: 'center',
-            }}>
-            02
-          </Text>
+  const circlesView = () => {
+    return (
+      <View>
+        <View style={{flexDirection: 'row', marginTop: 38}}>
+          <View style={styles.bluecircle}>
+            <Text style={{color: '#ffff', fontSize: 18, alignSelf: 'center'}}>
+              01
+            </Text>
+          </View>
+
+          <View style={styles.dots}></View>
+          <View style={styles.linebtwcircles}></View>
+          <View style={[styles.dots, {marginLeft: 0}]} />
+          <View
+            style={[
+              styles.bluecircle,
+              {
+                backgroundColor: 'white',
+                marginLeft: 10,
+                borderColor: colors.lightblue,
+              },
+            ]}>
+            <Text
+              style={{
+                color: colors.lightblue,
+                fontSize: 18,
+                alignSelf: 'center',
+              }}>
+              02
+            </Text>
+          </View>
+        </View>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={{marginLeft: 60, marginTop: 10}}>Verify Employer</Text>
+          <Text style={{marginLeft: 60, marginTop: 10}}>Register Details</Text>
         </View>
       </View>
-      <View style={{flexDirection:"row"}}>
-        <Text style={{marginLeft:60,marginTop:10}}>Verify Employer</Text>
-        <Text style={{marginLeft:60,marginTop:10}}>Register Details</Text>
-      </View>
+    );
+  };
+  return (
+    <ScreenHOC backIcon={false} leftblueimage={true}>
+      {circlesView()}
+
       <View style={styles.loginview}>
         <Text style={styles.logintext}>Enter Details To Verify Employer</Text>
         <View style={[styles.inputContainer, {marginTop: 10}]}>
@@ -70,7 +79,7 @@ const SignUp = ({navigation}) => {
           />
         </View>
 
-        <TouchableOpacity style={[styles.buttoncontainer]}>
+        <TouchableOpacity style={[styles.buttoncontainer]} onPress={()=>navigation.navigate('Register')}>
           <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
             {'Verify Employer'}
           </Text>
