@@ -34,6 +34,10 @@
       "sha1": "27f8f360fedcbc61030d6a0980dba2528cda7219"
     },
     {
+      "path": "src/assets/images/backtologin.png",
+      "sha1": "7fd01524c0db26d7b6276ed7f7e1cd0ae91b08e5"
+    },
+    {
       "path": "src/assets/images/calendar.png",
       "sha1": "17d85bb01a427536d81f38dd6cec2d8c12feab88"
     },
@@ -42,8 +46,24 @@
       "sha1": "de36884b62ea992ef688f3a3c04a9877d8ae842c"
     },
     {
+      "path": "src/assets/images/faceid.png",
+      "sha1": "02da8fcc6c58b010336bc0f44543b20faca22819"
+    },
+    {
+      "path": "src/assets/images/fingerprint.png",
+      "sha1": "dc6377edfb2cd1ad118876b84f62d64b7c4a980f"
+    },
+    {
       "path": "src/assets/images/hidden_eyes.png",
       "sha1": "9f652085f37fbf0f843f35ecede666821d4cc271"
+    },
+    {
+      "path": "src/assets/images/leftarrow.png",
+      "sha1": "f5305f84bff91d2e3d93ef50368f1beb51c8078d"
+    },
+    {
+      "path": "src/assets/images/loginleftarrow.png",
+      "sha1": "d3011eee891144b5a05c630400b97d45fa41b110"
     },
     {
       "path": "src/assets/images/rightborderblue.png",

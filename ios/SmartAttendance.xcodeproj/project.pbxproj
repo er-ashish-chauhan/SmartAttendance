@@ -29,6 +29,11 @@
 		A0C87CF8E9CB4830BD2519BD /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 786D4E1181CE4715A39AB962 /* camera.png */; };
 		C1419CFBABA546D582F97C2D /* rightborderblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5391FEEFF8634DDAAF18F2FA /* rightborderblue.png */; };
 		FBD32525F1AD463689BD70CB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 748FA8941E8841F0B1279A93 /* user.png */; };
+		3069A4EB43AE4C34B844358F /* backtologin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8127447475AD46BBA06CDA36 /* backtologin.png */; };
+		EE07AAEECEE24D05AD49D290 /* faceid.png in Resources */ = {isa = PBXBuildFile; fileRef = 3958F3DFD0914DA3B2143EFF /* faceid.png */; };
+		2EA7D0682D954469A9C91F77 /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = AD1C0C335DFF4A25B3E46961 /* fingerprint.png */; };
+		8A38A6F9EC8843248C3659DC /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D486E94664FC48F5838596EC /* leftarrow.png */; };
+		8C0DF5FA028F4CF68ACD4FE0 /* loginleftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A721C4BC244298B7BE2CE8 /* loginleftarrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,11 @@
 		786D4E1181CE4715A39AB962 /* camera.png */ = {isa = PBXFileReference; name = "camera.png"; path = "../src/assets/images/camera.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5391FEEFF8634DDAAF18F2FA /* rightborderblue.png */ = {isa = PBXFileReference; name = "rightborderblue.png"; path = "../src/assets/images/rightborderblue.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		748FA8941E8841F0B1279A93 /* user.png */ = {isa = PBXFileReference; name = "user.png"; path = "../src/assets/images/user.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8127447475AD46BBA06CDA36 /* backtologin.png */ = {isa = PBXFileReference; name = "backtologin.png"; path = "../src/assets/images/backtologin.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3958F3DFD0914DA3B2143EFF /* faceid.png */ = {isa = PBXFileReference; name = "faceid.png"; path = "../src/assets/images/faceid.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD1C0C335DFF4A25B3E46961 /* fingerprint.png */ = {isa = PBXFileReference; name = "fingerprint.png"; path = "../src/assets/images/fingerprint.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D486E94664FC48F5838596EC /* leftarrow.png */ = {isa = PBXFileReference; name = "leftarrow.png"; path = "../src/assets/images/leftarrow.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		42A721C4BC244298B7BE2CE8 /* loginleftarrow.png */ = {isa = PBXFileReference; name = "loginleftarrow.png"; path = "../src/assets/images/loginleftarrow.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +154,11 @@
 				786D4E1181CE4715A39AB962 /* camera.png */,
 				5391FEEFF8634DDAAF18F2FA /* rightborderblue.png */,
 				748FA8941E8841F0B1279A93 /* user.png */,
+				8127447475AD46BBA06CDA36 /* backtologin.png */,
+				3958F3DFD0914DA3B2143EFF /* faceid.png */,
+				AD1C0C335DFF4A25B3E46961 /* fingerprint.png */,
+				D486E94664FC48F5838596EC /* leftarrow.png */,
+				42A721C4BC244298B7BE2CE8 /* loginleftarrow.png */,
 			);
 			name = Resources;
 			path = "";
@@ -313,6 +328,11 @@
 				A0C87CF8E9CB4830BD2519BD /* camera.png in Resources */,
 				C1419CFBABA546D582F97C2D /* rightborderblue.png in Resources */,
 				FBD32525F1AD463689BD70CB /* user.png in Resources */,
+				3069A4EB43AE4C34B844358F /* backtologin.png in Resources */,
+				EE07AAEECEE24D05AD49D290 /* faceid.png in Resources */,
+				2EA7D0682D954469A9C91F77 /* fingerprint.png in Resources */,
+				8A38A6F9EC8843248C3659DC /* leftarrow.png in Resources */,
+				8C0DF5FA028F4CF68ACD4FE0 /* loginleftarrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
