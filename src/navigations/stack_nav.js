@@ -11,7 +11,8 @@ import SignUp from "../screens/Signup";
 import Register from "../screens/RegisterDetails";
 import Forgotpassword from "../screens/Forgotpassword";
 import Resetpassword from "../screens/Resetpassword"
-
+import Dashboard from "../screens/Dashboard"
+import Settings from "../screens/Settings"
 const Stack = createStackNavigator();
 
 export default StackNavigator = () => {
@@ -39,6 +40,8 @@ export default StackNavigator = () => {
                     <Stack.Screen name="Register" component={Register} />
                     <Stack.Screen name="Forgotpassword" component={Forgotpassword} />
                     <Stack.Screen name="Resetpassword" component={Resetpassword} />
+                    <Stack.Screen name="Dashboard" component={Dashboard} />
+                    <Stack.Screen name="Settings" component={Settings} />
                 </>
             ) : (
                 <>

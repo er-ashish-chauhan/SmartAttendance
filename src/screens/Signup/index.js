@@ -48,11 +48,9 @@ const SignUp = ({navigation}) => {
       </View>
     );
   };
-  return (
-    <ScreenHOC backIcon={false} leftblueimage={true}>
-      {circlesView()}
-
-      <View style={styles.loginview}>
+  const DetailsView = () => {
+    return (
+      <View>
         <Text style={styles.logintext}>Enter Details To Verify Employer</Text>
         <View style={[styles.inputContainer, {marginTop: 10}]}>
           <TextInput
@@ -78,8 +76,15 @@ const SignUp = ({navigation}) => {
             editable={true}
           />
         </View>
-
-        <TouchableOpacity style={[styles.buttoncontainer]} onPress={()=>navigation.navigate('Register')}>
+      </View>
+    );
+  };
+  const Buttonsview = () => {
+    return (
+      <View>
+        <TouchableOpacity
+          style={[styles.buttoncontainer]}
+          onPress={() => navigation.navigate('Register')}>
           <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
             {'Verify Employer'}
           </Text>
@@ -90,6 +95,15 @@ const SignUp = ({navigation}) => {
             Already have an account? Login
           </Text>
         </TouchableOpacity>
+      </View>
+    );
+  };
+  return (
+    <ScreenHOC backIcon={false} leftblueimage={true}>
+      {circlesView()}
+      <View style={styles.loginview}>
+        {DetailsView()}
+        {Buttonsview()}
       </View>
     </ScreenHOC>
   );

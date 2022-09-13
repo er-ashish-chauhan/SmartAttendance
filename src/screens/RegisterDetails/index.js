@@ -1,10 +1,9 @@
-
 import React, {useState} from 'react';
-import {View, Text, TextInput,Image, TouchableOpacity} from 'react-native';
+import {View, Text, TextInput, Image, TouchableOpacity} from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import images from '../../utils/images';
-import { normalize } from '../../utils/normalizeHeightwidth';
+import {normalize} from '../../utils/normalizeHeightwidth';
 import {styles} from './styles';
 const Register = ({navigation}) => {
   const [email, setEmail] = useState();
@@ -15,12 +14,21 @@ const Register = ({navigation}) => {
   const circlesView = () => {
     return (
       <View>
-        <View style={{flexDirection: 'row', marginTop:normalize(5)}}>
-          <View style={[styles.bluecircle,{
+        <View style={{flexDirection: 'row', marginTop: normalize(5)}}>
+          <View
+            style={[
+              styles.bluecircle,
+              {
                 backgroundColor: 'white',
                 borderColor: colors.lightblue,
-              }]}>
-            <Text style={{color: colors.lightblue, fontSize: 18, alignSelf: 'center'}}>
+              },
+            ]}>
+            <Text
+              style={{
+                color: colors.lightblue,
+                fontSize: 18,
+                alignSelf: 'center',
+              }}>
               01
             </Text>
           </View>
@@ -37,7 +45,7 @@ const Register = ({navigation}) => {
             ]}>
             <Text
               style={{
-                color: "#ffff",
+                color: '#ffff',
                 fontSize: 18,
                 alignSelf: 'center',
               }}>
@@ -52,38 +60,72 @@ const Register = ({navigation}) => {
       </View>
     );
   };
-  const recognitionView=()=>{
-    return(
-        <View>
-        <View style={{flexDirection:"row",marginTop:normalize(20)}}>
-            <Image source={images.faceid} style={{marginLeft:normalize(105),height:normalize(35),width:normalize(35),marginRight:normalize(40)}}/>
-            <Image source={images.fingerprint} style={{height:normalize(35),width:normalize(35)}}/>
+  const recognitionView = () => {
+    return (
+      <View>
+        <View style={{flexDirection: 'row', marginTop: normalize(20)}}>
+          <Image
+            source={images.faceid}
+            style={{
+              marginLeft: normalize(105),
+              height: normalize(35),
+              width: normalize(35),
+              marginRight: normalize(40),
+            }}
+          />
+          <Image
+            source={images.fingerprint}
+            style={{height: normalize(35), width: normalize(35)}}
+          />
         </View>
-        <View style={{flexDirection:"row",marginTop:normalize(10)}}>
-            <Text style={{marginLeft:normalize(95),marginRight:normalize(17),color:"#ffff"}}>
-                Facelock
-            </Text>
-            <Text style={{color:"#ffff"}}>
-                Fingerprint
-            </Text>
+        <View style={{flexDirection: 'row', marginTop: normalize(10)}}>
+          <Text
+            style={{
+              marginLeft: normalize(95),
+              marginRight: normalize(17),
+              color: '#ffff',
+            }}>
+            Facelock
+          </Text>
+          <Text style={{color: '#ffff'}}>Fingerprint</Text>
         </View>
-        </View>
-    )
-  }
-  return (
-    <ScreenHOC title={false}  backIcon={false} backloginIcon={true} backnavigation={()=>navigation.goBack()}  leftblueimage={false}showcalenderimage={false}rightblueimage={true}>
-      {circlesView()}
-
-      <View style={[styles.loginview,{marginTop:normalize(40)}]}>
-      <View style={ styles.imagecontainer}>
-    
-            <Image source={images.userProfile} style={{height:normalize(65),width:normalize(65),alignSelf:"center"}}/>
-          </View>
-          <View style={styles.cameracontainer}>
-          <Image source={images.camera} style={{height:normalize(16),width:normalize(16),alignSelf:"center"}}/>
-          </View>
-       
-         <View style={[styles.inputContainer, {marginTop: 10}]}>
+      </View>
+    );
+  };
+  const registerandpolicyView = () => {
+    return (
+      <View>
+        <TouchableOpacity style={[styles.buttoncontainer]}>
+          <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
+            {'Register'}
+          </Text>
+        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#ffff',
+            fontSize: 12,
+            alignSelf: 'center',
+            marginTop: 10,
+          }}>
+          By signing up you agree to our
+        </Text>
+        <Text
+          style={{
+            color: '#ffff',
+            fontSize: 12,
+            alignSelf: 'center',
+            textDecorationStyle: 'dashed',
+            marginTop: 10,
+          }}>
+          Terms and conditions & Privacy policy
+        </Text>
+      </View>
+    );
+  };
+  const detailsView = () => {
+    return (
+      <View>
+        <View style={[styles.inputContainer, {marginTop: 10}]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -167,14 +209,70 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-  {recognitionView()}
-  <TouchableOpacity style={[styles.buttoncontainer]}>
-          <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
-            {'Register'}
-          </Text>
-          </TouchableOpacity>
-          <Text style={{color:"#ffff",fontSize:12,alignSelf:"center",marginTop:10}}>By signing up you agree to our</Text>
-          <Text style={{color:"#ffff",fontSize:12,alignSelf:"center",textDecorationStyle:"dashed", marginTop:10}}>Terms and conditions & Privacy policy</Text>
+      </View>
+    );
+  };
+  const profileimageview = () => {
+    return (
+      <View>
+        <View style={styles.imagecontainer}>
+          <Image
+            source={images.userProfile}
+            style={{
+              height: normalize(65),
+              width: normalize(65),
+              alignSelf: 'center',
+            }}
+          />
+        </View>
+        <View style={styles.cameracontainer}>
+          <Image
+            source={images.camera}
+            style={{
+              height: normalize(16),
+              width: normalize(16),
+              alignSelf: 'center',
+            }}
+          />
+        </View>
+      </View>
+    );
+  };
+  return (
+    <ScreenHOC
+      title={false}
+      backIcon={false}
+      backloginIcon={true}
+      backnavigation={() => navigation.goBack()}
+      leftblueimage={false}
+      showcalenderimage={false}
+      rightblueimage={true}>
+      {circlesView()}
+      <View style={[styles.loginview, {marginTop: normalize(40)}]}>
+      <View style={styles.imagecontainer}>
+          <Image
+            source={images.userProfile}
+            style={{
+              height: normalize(65),
+              width: normalize(65),
+              alignSelf: 'center',
+            }}
+          />
+        </View>
+        <View style={styles.cameracontainer}>
+          <Image
+            source={images.camera}
+            style={{
+              height: normalize(16),
+              width: normalize(16),
+              alignSelf: 'center',
+            }}
+          />
+        </View>
+        {/* {profileimageview()} */}
+        {detailsView()}
+        {recognitionView()}
+        {registerandpolicyView()}
       </View>
     </ScreenHOC>
   );

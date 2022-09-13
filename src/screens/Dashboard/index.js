@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
+import { normalize } from '../../utils/normalizeHeightwidth';
 import {styles} from './styles';
 
-const LoginScreen = ({navigation}) => {
+const Dashboard = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password,setPassword]=useState()
   const onchangemail = text => {
@@ -46,37 +47,21 @@ const LoginScreen = ({navigation}) => {
       </View>
     );
   };
-  const Buttonsview = () => {
-    return (
-      <View>
-        <TouchableOpacity onPress={() => navigation.navigate('Forgotpassword')}>
-          <Text style={{alignSelf: 'flex-end', marginTop: 20, color: '#ffff'}}>
-            Forgot Password ?
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.buttoncontainer]}
-        onPress={()=>navigation.navigate('Dashboard')}
-        >
-          <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
-            {'Login'}
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-          <Text style={{alignSelf: 'center', marginTop: 20, color: '#ffff'}}>
-            Didnt have an account? Signup
-          </Text>
-        </TouchableOpacity>
-      </View>
-    );
-  };
+ 
   return (
-    <ScreenHOC backIcon={false} leftblueimage={true}>
-      <View style={styles.loginview}>
-        {DetailsView()}
-        {Buttonsview()}
-      </View>
+    <ScreenHOC 
+    backIcon={false}
+    title={false}  
+    showcalenderimage={false} 
+    leftblueimage={true}>
+     <View style={{flexDirection:'row',marginTop:-35,alignItems:"center"}}>
+       <TouchableOpacity onPress={()=>navigation.navigate('Settings')}>
+       <Text style={{alignSelf:"center",marginLeft:normalize(160)}}>Hi John</Text>
+
+        </TouchableOpacity>        
+     </View>
     </ScreenHOC>
   );
 };
 
-export default LoginScreen;
+export default Dashboard;
