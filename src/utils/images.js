@@ -11,6 +11,16 @@ const images= {
     loginleftarrow:require("../assets/images/loginleftarrow.png"),
     faceid:require("../assets/images/faceid.png"),
     fingerprint:require("../assets/images/fingerprint.png"),
-    backtologin:require("../assets/images/backtologin.png")
+    backtologin:require("../assets/images/backtologin.png"),
+    homeicon:require("../assets/images/homeicon.png"),
+    attendanceicon:require("../assets/images/attendanceicon.png"),
+    leavesicon:require("../assets/images/leavesicon.png"),
+    moreicon:require("../assets/images/moreicon.png"),
+    reportsicon:require("../assets/images/reportsicon.png"),
+    bell:require("../assets/images/bell.png"),
+    squarebox:require("../assets/images/square.png"),
+    switch:require("../assets/images/switch.png"),
+    redEclipse:require("../assets/images/redEcllipse.png"),
+    coffee:require("../assets/images/coffee.png")
 }
 export default images

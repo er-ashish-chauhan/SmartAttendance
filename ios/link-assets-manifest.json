@@ -34,8 +34,16 @@
       "sha1": "27f8f360fedcbc61030d6a0980dba2528cda7219"
     },
     {
+      "path": "src/assets/images/attendanceicon.png",
+      "sha1": "6f301bfd4f78d11082e6bf89987ca7bb32fb04a9"
+    },
+    {
       "path": "src/assets/images/backtologin.png",
       "sha1": "7fd01524c0db26d7b6276ed7f7e1cd0ae91b08e5"
+    },
+    {
+      "path": "src/assets/images/bell.png",
+      "sha1": "e00e694e41442365d04950b17c299b5f6a80590c"
     },
     {
       "path": "src/assets/images/calendar.png",
@@ -44,6 +52,10 @@
     {
       "path": "src/assets/images/camera.png",
       "sha1": "de36884b62ea992ef688f3a3c04a9877d8ae842c"
+    },
+    {
+      "path": "src/assets/images/coffee.png",
+      "sha1": "ca17aba83763bf10a136b045103ee9557bbb9bb6"
     },
     {
       "path": "src/assets/images/faceid.png",
@@ -58,12 +70,32 @@
       "sha1": "9f652085f37fbf0f843f35ecede666821d4cc271"
     },
     {
+      "path": "src/assets/images/homeicon.png",
+      "sha1": "4c6c1976cd5fd88c2cf55e8590bb5f6f9aa69a7b"
+    },
+    {
+      "path": "src/assets/images/leavesicon.png",
+      "sha1": "51d9d19751e962535c4e7b55aa5758826194c870"
+    },
+    {
       "path": "src/assets/images/leftarrow.png",
       "sha1": "f5305f84bff91d2e3d93ef50368f1beb51c8078d"
     },
     {
       "path": "src/assets/images/loginleftarrow.png",
       "sha1": "d3011eee891144b5a05c630400b97d45fa41b110"
+    },
+    {
+      "path": "src/assets/images/moreicon.png",
+      "sha1": "1511dcea6ff1093b4e1d96b25dc571b18b05c109"
+    },
+    {
+      "path": "src/assets/images/redEcllipse.png",
+      "sha1": "dbca88a8f20da4ea1dda18f47f0b6af584b85061"
+    },
+    {
+      "path": "src/assets/images/reportsicon.png",
+      "sha1": "0564d61c0ac028506aca2effcca6272b88275338"
     },
     {
       "path": "src/assets/images/rightborderblue.png",
@@ -76,6 +108,14 @@
     {
       "path": "src/assets/images/smallbluebox.png",
       "sha1": "48b07229ae661eb60f0bc6097c0747f49351890e"
+    },
+    {
+      "path": "src/assets/images/square.png",
+      "sha1": "05745ead6171edbd724023306573407d02a66c53"
+    },
+    {
+      "path": "src/assets/images/switch.png",
+      "sha1": "8c07e4b07e40a92bc221da24f2059d78abde1c35"
     },
     {
       "path": "src/assets/images/user.png",
