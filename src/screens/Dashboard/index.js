@@ -10,40 +10,7 @@ import {styles} from './styles';
 const Dashboard = ({navigation}) => {
   const [punchin, setPunchin] = useState(true);
 
-  const DetailsView = () => {
-    return (
-      <View>
-        <Text style={styles.logintext}>Login</Text>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
-          <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
-            placeholder={'Email/Phone Number'}
-            multiline={false}
-            placeholderTextColor={'white'}
-            underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
-            style={{width: 100, color: '#ffff'}}
-          />
-        </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
-          <TextInput
-            value={password}
-            onChangeText={text => onChangePassword(text)}
-            placeholder={'Password'}
-            multiline={false}
-            style={{width: 100, color: '#ffff'}}
-            placeholderTextColor={'white'}
-            underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
-            secureTextEntry={true}
-          />
-        </View>
-      </View>
-    );
-  };
+ 
   const detailsView = () => {
     return (
       <View>
