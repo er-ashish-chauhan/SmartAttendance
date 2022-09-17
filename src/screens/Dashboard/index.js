@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
 import images from '../../utils/images';
-import {normalize} from '../../utils/normalizeHeightwidth';
-import {styles} from './styles';
+import { normalize } from '../../utils/normalizeHeightwidth';
+import { styles } from './styles';
 
-const Dashboard = ({navigation}) => {
+const Dashboard = ({ navigation }) => {
   const [punchin, setPunchin] = useState(true);
 
- 
+
   const detailsView = () => {
     return (
       <View>
@@ -32,17 +32,17 @@ const Dashboard = ({navigation}) => {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => {}}
-            style={{alignSelf: 'flex-end', marginRight: normalize(30)}}>
+            onPress={() => { }}
+            style={{ alignSelf: 'flex-end', marginRight: normalize(30) }}>
             <Image source={images.bell}></Image>
           </TouchableOpacity>
         </View>
         <Text
-          style={{alignSelf: 'center', fontSize: normalize(18), marginTop: 20}}>
+          style={{ alignSelf: 'center', fontSize: normalize(18), marginTop: 20 }}>
           Friday
         </Text>
         <Text
-          style={{alignSelf: 'center', fontSize: normalize(18), marginTop: 18}}>
+          style={{ alignSelf: 'center', fontSize: normalize(18), marginTop: 18 }}>
           26 Sept, 2022
         </Text>
         <Text
@@ -69,7 +69,7 @@ const Dashboard = ({navigation}) => {
   };
   const punchView = () => {
     return (
-      <View style={{flexDirection: 'row'}}>
+      <View style={{ flexDirection: 'row' }}>
         <Image source={images.squarebox} style={styles.squarebox}></Image>
         <View style={styles.punchinImagecontainer}>
           <View style={styles.punchin}>
@@ -89,60 +89,60 @@ const Dashboard = ({navigation}) => {
   };
   const breakView = () => {
     return (
-      <View style={{flexDirection: 'row'}}>
+      <View style={{ flexDirection: 'row' }}>
         <Text style={styles.locationtext}> Sec 32, Gurugram</Text>
 
         <View style={styles.eclipseborder}>
-          <Image source={images.coffee} style={{alignSelf: 'center'}} />
+          <Image source={images.coffee} style={{ alignSelf: 'center' }} />
         </View>
       </View>
     );
   };
-  const timedetailsView=()=>{
-    return(
-<View style={styles.detailcontainer}>
-        <View style={{flexDirection:"column"}}>
-            <Text style={styles.detailcontainertext}>
-                Punch In
-            </Text>
-            <Text style={[styles.detailcontainertext,{marginTop:2,color:colors.lightblue}]}>
+  const timedetailsView = () => {
+    return (
+      <View style={styles.detailcontainer}>
+        <View style={{ flexDirection: "column" }}>
+          <Text style={styles.detailcontainertext}>
+            Punch In
+          </Text>
+          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
             09:30:24
-            </Text>
+          </Text>
 
-            <Text style={[styles.detailcontainertext,{marginTop:5}]}>
+          <Text style={[styles.detailcontainertext, { marginTop: 5 }]}>
             Punch Out
-            </Text>
-            <Text style={[styles.detailcontainertext,{marginTop:2,color:colors.lightblue}]}>
+          </Text>
+          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
             09:30:24
-            </Text>
+          </Text>
         </View>
-        <View style={{flexDirection:"column",marginLeft:normalize(25)}}>
-            <Text style={styles.detailcontainertext}>
-                Break Hours
-            </Text>
-            <Text style={[styles.detailcontainertext,{marginTop:2,color:colors.lightblue}]}>
+        <View style={{ flexDirection: "column", marginLeft: normalize(25) }}>
+          <Text style={styles.detailcontainertext}>
+            Break Hours
+          </Text>
+          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
             00:00:00
-            </Text>
+          </Text>
 
-            <Text style={[styles.detailcontainertext,{marginTop:5}]}>
+          <Text style={[styles.detailcontainertext, { marginTop: 5 }]}>
             Status
-            </Text>
-            <Text style={[styles.detailcontainertext,{marginTop:2,color:"#16B643"}]}>
+          </Text>
+          <Text style={[styles.detailcontainertext, { marginTop: 2, color: "#16B643" }]}>
             Present
-            </Text>
+          </Text>
         </View>
         <View style={styles.divider}></View>
-        <View style={{flexDirection:"column",marginLeft:normalize(15),marginTop:normalize(12)}}>
-            <Text style={styles.detailcontainertext}>
-                Total Hours
-            </Text>
-            <Text style={[styles.detailcontainertext,{marginTop:2,color:colors.lightblue}]}>
+        <View style={{ flexDirection: "column", marginLeft: normalize(15), marginTop: normalize(12) }}>
+          <Text style={styles.detailcontainertext}>
+            Total Hours
+          </Text>
+          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
             00:00:00
-            </Text>
+          </Text>
 
-            <Text style={[styles.detailcontainertext,{color:"#16B643"}]}>
+          <Text style={[styles.detailcontainertext, { color: "#16B643" }]}>
             (+30m)
-            </Text>
+          </Text>
         </View>
       </View>
     )
@@ -156,7 +156,7 @@ const Dashboard = ({navigation}) => {
       {detailsView()}
       {punchView()}
       {breakView()}
-    {timedetailsView()}
+      {timedetailsView()}
     </ScreenHOC>
   );
 };

@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
     width: 40,
     borderRadius: 20,
     borderWidth: 1,
-borderColor:colors.lightblue,
+    borderColor: colors.lightblue,
     backgroundColor: colors.lightblue,
     marginLeft: 100,
     alignItems: 'center',
