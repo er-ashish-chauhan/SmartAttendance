@@ -21,7 +21,7 @@ const Dashboard = ({ navigation }) => {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <View>
             <Text
               style={{
                 alignSelf: 'center',
@@ -30,9 +30,10 @@ const Dashboard = ({ navigation }) => {
               }}>
               Hi, John
             </Text>
-          </TouchableOpacity>
+          </View>
           <TouchableOpacity
-            onPress={() => { }}
+            activeOpacity={0.6}
+            onPress={() => navigation.navigate("Notification")}
             style={{ alignSelf: 'flex-end', marginRight: normalize(30) }}>
             <Image source={images.bell}></Image>
           </TouchableOpacity>
@@ -67,6 +68,7 @@ const Dashboard = ({ navigation }) => {
       </View>
     );
   };
+
   const punchView = () => {
     return (
       <View style={{ flexDirection: 'row' }}>
@@ -87,6 +89,7 @@ const Dashboard = ({ navigation }) => {
       </View>
     );
   };
+
   const breakView = () => {
     return (
       <View style={{ flexDirection: 'row' }}>
@@ -98,6 +101,7 @@ const Dashboard = ({ navigation }) => {
       </View>
     );
   };
+
   const timedetailsView = () => {
     return (
       <View style={styles.detailcontainer}>
@@ -147,11 +151,13 @@ const Dashboard = ({ navigation }) => {
       </View>
     )
   }
+
   return (
     <ScreenHOC
       backIcon={false}
       title={false}
       showcalenderimage={false}
+      showHeaderWithoutTitle={true}
       leftblueimage={true}>
       {detailsView()}
       {punchView()}

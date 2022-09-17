@@ -22,6 +22,12 @@ const images = {
   switch: require("../assets/images/switch.png"),
   redEclipse: require("../assets/images/redEcllipse.png"),
   coffee: require("../assets/images/coffee.png"),
+  calendar: require('../assets/images/calendar.png'),
+  lightblueborder: require('../assets/images/Rectangle.png'),
+  smallbluebox: require('../assets/images/smallbluebox.png'),
+  hidden_eyes: require('../assets/images/hidden_eyes.png'),
+  show_eyes: require('../assets/images/show_eyes.png'),
+  rightblueborder: require('../assets/images/rightborderblue.png'),
   codeIcon: require('../assets/images/code.png'),
   mobileIcon: require('../assets/images/mobile-alt.png'),
   tagIcon: require('../assets/images/tag.png'),
@@ -29,5 +35,7 @@ const images = {
   faceIcon: require('../assets/images/face-idIcon.png'),
   fingerprintIcon: require('../assets/images/fingerprintIcon.png'),
   indexHcl: require('../assets/images/indexHcl.png'),
-}
+  rightarrow: require('../assets/images/rightarrow.png'),
+  sendReply: require('../assets/images/sendReply.png'),
+};
 export default images;

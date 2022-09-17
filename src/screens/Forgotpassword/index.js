@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import images from '../../utils/images';
-import {normalize} from '../../utils/normalizeHeightwidth';
-import {styles} from './styles';
-const Forgotpassword = ({navigation}) => {
+import { normalize } from '../../utils/normalizeHeightwidth';
+import { styles } from './styles';
+const Forgotpassword = ({ navigation }) => {
   const [email, setEmail] = useState();
   const onchangemail = text => {
     setEmail(text);
@@ -25,7 +25,7 @@ const Forgotpassword = ({navigation}) => {
           Don’t Worry!! It happens.Please enter the email/Phone no. associated
           with account{' '}
         </Text>
-        <View style={[styles.inputContainer, {marginTop: 25}]}>
+        <View style={[styles.inputContainer, { marginTop: 25 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -46,22 +46,25 @@ const Forgotpassword = ({navigation}) => {
         <TouchableOpacity
           style={[styles.buttoncontainer]}
           onPress={() => navigation.navigate('Resetpassword')}>
-          <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
+          <Text style={{ color: '#000000', fontSize: 16, fontWeight: '500' }}>
             {'Submit'}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             source={images.backtologin}
-            style={{marginTop: normalize(30), alignSelf: 'center'}}
+            style={{ marginTop: normalize(30), alignSelf: 'center' }}
           />
         </TouchableOpacity>
       </View>
     );
   };
   return (
-    <ScreenHOC backIcon={false} leftblueimage={true}>
-      <Image source={images.smallbluebox} style={{alignSelf: 'flex-end'}} />
+    <ScreenHOC
+      showHeaderWithoutTitle={true}
+      backIcon={false}
+      leftblueimage={true}>
+      <Image source={images.smallbluebox} style={{ alignSelf: 'flex-end' }} />
       <View style={styles.loginview}>
         {detailsView()}
         {buttonsView()}

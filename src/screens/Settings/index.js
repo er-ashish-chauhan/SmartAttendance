@@ -99,8 +99,8 @@ const Settings = ({ navigation }) => {
 
   return (
     <ScreenHOC
-      backIcon={false}
       title={false}
+      backIcon={true}
       showcalenderimage={false}
       leftblueimage={false}
       customHeader={true}

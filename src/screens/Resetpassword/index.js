@@ -68,6 +68,7 @@ const Resetpassword = ({navigation}) => {
     <ScreenHOC
       backIcon={false}
       leftblueimage={true}
+      showHeaderWithoutTitle={true}
       calendartext={'Attendance Tracker'}>
       <Image source={images.smallbluebox} style={{alignSelf: 'flex-end'}} />
       <View style={styles.loginview}>

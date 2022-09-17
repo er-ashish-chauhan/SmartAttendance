@@ -3,6 +3,7 @@ const colors = {
     bodyBlack: '#101418',
     white: '#fff',
     light: '#f0f0f0',
+    lightBorder: '#C2C2C2',
     lightblue:'#007CFF',
     // themeColor: "#da2a1c",
     themeColor: "rgb(20,116,164)",
@@ -16,7 +17,7 @@ const colors = {
     gray_9da1a1: "#9da1a1",
 
     shadowColor: "#dedfdf",
-    gray_ebebeb: "#ebebeb",
+    gray_e5e5e5: "#e5e5e5",
     gray_b9b9b9: "#b9b9b9",
     gray_9e9e9e: "#9e9e9e",
     gray_eaeaea: "#eaeaea",
