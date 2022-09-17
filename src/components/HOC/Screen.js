@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Text,
   View,
@@ -11,7 +11,7 @@ import {
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
 import images from '../../utils/images';
-import {normalize} from '../../utils/normalizeHeightwidth';
+import { normalize } from '../../utils/normalizeHeightwidth';
 // import CustomHeader from "../customHeader";
 
 const ScreenHOC = ({
@@ -26,7 +26,7 @@ const ScreenHOC = ({
   headerRight,
   headerTitle,
   onBackPress,
-  safeAreaRequired = true,
+  safeAreaRequired = false,
   showBackIcon = false,
   showHeader = false,
   statusBarColor = 'white',
@@ -51,29 +51,52 @@ const ScreenHOC = ({
   calendartext = 'Smart Attendance',
   backloginIcon = false,
   backnavigation,
-  customHeader=false,
-  customHeaderHeading=""
+  customHeader = false,
+  customHeaderHeading = '',
 }) => {
   const [stateChange, setStateChanged] = useState(false);
 
   return (
-    <View style={{flex: 1, backgroundColor: colors.light}}>
-        {customHeader &&
-        <View>
-        <View style={{flexDirection:"row",marginTop: normalize(60),
-        marginLeft: normalize(24)}}>
-            <TouchableOpacity onPress={backnavigation} style={{alignItems:"flex-start"}}>
-            <Image
-              source={images.leftarrow}/>
+    <View style={{ flex: 1, backgroundColor: colors.light }}>
+      {!!safeAreaRequired && (
+        <SafeAreaView
+          style={{
+            backgroundColor: colors.white,
+          }}
+        />
+      )}
+      {customHeader && (
+        <View style={{ backgroundColor: colors.white }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              // marginTop: normalize(30),
+              marginLeft: normalize(24),
+            }}>
+            <TouchableOpacity
+              onPress={backnavigation}
+              style={{ alignItems: 'flex-start' }}>
+              <Image source={images.leftarrow} />
             </TouchableOpacity>
-            <Text style={{alignItems:"center",fontSize:16,marginLeft:normalize(110)}}>
-                {customHeaderHeading}
+            <Text
+              style={{
+                alignItems: 'center',
+                fontSize: 16,
+                marginLeft: normalize(110),
+              }}>
+              {customHeaderHeading}
             </Text>
-            </View>
-            <View style={{borderBottomWidth:0.5,borderBottomColor:"rgba(83, 225, 208,0.4)",marginTop:normalize(20)}}/>
+          </View>
+          <View
+            style={{
+              borderBottomWidth: 0.5,
+              borderBottomColor: 'rgba(83, 225, 208,0.4)',
+              marginTop: normalize(20),
+            }}
+          />
         </View>
-        }
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      )}
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         {backIcon && (
           <TouchableOpacity onPress={backnavigation}>
             <Image
@@ -114,7 +137,7 @@ const ScreenHOC = ({
             }}></Image>
         )}
       </View>
-      <View style={{flexDirection: 'column', justifyContent: 'space-between'}}>
+      <View style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
         {showcalenderimage && (
           <Image
             source={images.calendar}
@@ -140,14 +163,7 @@ const ScreenHOC = ({
         {/* {showrightbluebox&& <Image source={images.smallbluebox} style={{alignSelf:"flex-end",marginTop:90}}/> } */}
       </View>
 
-      {!!safeAreaRequired && (
-        <SafeAreaView
-          style={{
-            backgroundColor:
-              type == 'primary' ? colors.light : colors.primary_7c2529,
-          }}
-        />
-      )}
+
 
       {
         <StatusBar
@@ -168,10 +184,10 @@ const ScreenHOC = ({
                 onLanguageChange={languageHandler}
                 onBackPress={() => navigation.goBack()}
                 onRightPress={() => navigation.navigate("Settings")} /> */}
-      <View style={{flex: 1, ...containerStyle, borderWidth: 0}}>
+      <View style={{ flex: 1, ...containerStyle, borderWidth: 0 }}>
         {children}
       </View>
-      {!!bottomSafeArea && <SafeAreaView style={{backgroundColor: 'white'}} />}
+      {!!bottomSafeArea && <SafeAreaView style={{ backgroundColor: 'white' }} />}
     </View>
   );
 };
