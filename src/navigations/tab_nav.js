@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { Image } from "react-native";
 import Dashboard from "../screens/Dashboard";
+import Reports from "../screens/Reports";
 import colors from "../utils/colors";
 import fonts from "../utils/fonts";
 import images from "../utils/images";
@@ -69,7 +70,7 @@ return(
     />
        <Tab.Screen
       name={"Reports"}
-      component={Dashboard}
+      component={Reports}
       options={{
         tabBarIcon: ({ color, size }) => (
           <Image
