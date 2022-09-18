@@ -30,6 +30,10 @@
       "sha1": "c3d1da783e6431f0374af5f317980a499c66304e"
     },
     {
+      "path": "src/assets/fonts/Ionicons.ttf",
+      "sha1": "b5281fbfa43129abc3e412dd938cfcf0b77de999"
+    },
+    {
       "path": "src/assets/images/Rectangle.png",
       "sha1": "27f8f360fedcbc61030d6a0980dba2528cda7219"
     },
@@ -46,6 +50,10 @@
       "sha1": "e00e694e41442365d04950b17c299b5f6a80590c"
     },
     {
+      "path": "src/assets/images/bottomblueimage.png",
+      "sha1": "2b794acf098d55f0a41a97842c8909315e249e07"
+    },
+    {
       "path": "src/assets/images/calendar.png",
       "sha1": "17d85bb01a427536d81f38dd6cec2d8c12feab88"
     },
@@ -54,8 +62,16 @@
       "sha1": "de36884b62ea992ef688f3a3c04a9877d8ae842c"
     },
     {
+      "path": "src/assets/images/code.png",
+      "sha1": "cecaa3f79b6c5e6fb7800ed22c7a64b748bf8c6e"
+    },
+    {
       "path": "src/assets/images/coffee.png",
       "sha1": "ca17aba83763bf10a136b045103ee9557bbb9bb6"
+    },
+    {
+      "path": "src/assets/images/face-idIcon.png",
+      "sha1": "7ccc63c69a48060c5ca157661a1da7439c2ab9af"
     },
     {
       "path": "src/assets/images/faceid.png",
@@ -66,12 +82,24 @@
       "sha1": "dc6377edfb2cd1ad118876b84f62d64b7c4a980f"
     },
     {
+      "path": "src/assets/images/fingerprintIcon.png",
+      "sha1": "695c127bc6477d9eec72721e063bd38316c05bd4"
+    },
+    {
       "path": "src/assets/images/hidden_eyes.png",
       "sha1": "9f652085f37fbf0f843f35ecede666821d4cc271"
     },
     {
       "path": "src/assets/images/homeicon.png",
       "sha1": "4c6c1976cd5fd88c2cf55e8590bb5f6f9aa69a7b"
+    },
+    {
+      "path": "src/assets/images/indexHcl.png",
+      "sha1": "fb7e9847eb9f0a412937a90fb48ba75105ad1264"
+    },
+    {
+      "path": "src/assets/images/leaveshistory.png",
+      "sha1": "52bf78ab0ec429ff22ea6b0659dc5e92bc640257"
     },
     {
       "path": "src/assets/images/leavesicon.png",
@@ -86,8 +114,16 @@
       "sha1": "d3011eee891144b5a05c630400b97d45fa41b110"
     },
     {
+      "path": "src/assets/images/mobile-alt.png",
+      "sha1": "59f359c628957388ae49d5c17ffaa7738b920677"
+    },
+    {
       "path": "src/assets/images/moreicon.png",
       "sha1": "1511dcea6ff1093b4e1d96b25dc571b18b05c109"
+    },
+    {
+      "path": "src/assets/images/o.png",
+      "sha1": "db15a05fc055c1f54d5d60937eb80ffca36dd929"
     },
     {
       "path": "src/assets/images/redEcllipse.png",
@@ -98,8 +134,16 @@
       "sha1": "0564d61c0ac028506aca2effcca6272b88275338"
     },
     {
+      "path": "src/assets/images/rightarrow.png",
+      "sha1": "9cb6520e6e04ff2eae920037e14aa1b7160b07c7"
+    },
+    {
       "path": "src/assets/images/rightborderblue.png",
       "sha1": "477b26e3f35345a226df421ca8729ac57c5778d4"
+    },
+    {
+      "path": "src/assets/images/sendReply.png",
+      "sha1": "113ad6eaa8817cf881434dd3d7cd1978c7defa7f"
     },
     {
       "path": "src/assets/images/show_eyes.png",
@@ -116,6 +160,10 @@
     {
       "path": "src/assets/images/switch.png",
       "sha1": "8c07e4b07e40a92bc221da24f2059d78abde1c35"
+    },
+    {
+      "path": "src/assets/images/tag.png",
+      "sha1": "45d3fe06130ab3b05d1e93d4d4f19091b20e9a98"
     },
     {
       "path": "src/assets/images/user.png",

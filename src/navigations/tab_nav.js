@@ -3,6 +3,7 @@ import { DrawerActions } from "@react-navigation/native";
 import React from "react";
 import { Image } from "react-native";
 import Dashboard from "../screens/Dashboard";
+import Leaves from "../screens/Leaves";
 import Reports from "../screens/Reports";
 import colors from "../utils/colors";
 import fonts from "../utils/fonts";
@@ -58,7 +59,7 @@ export function TabNavigation(props) {
       />
       <Tab.Screen
         name={"Leaves"}
-        component={Dashboard}
+        component={Leaves}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Image

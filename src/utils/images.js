@@ -37,5 +37,7 @@ const images = {
   indexHcl: require('../assets/images/indexHcl.png'),
   rightarrow: require('../assets/images/rightarrow.png'),
   sendReply: require('../assets/images/sendReply.png'),
+  leaveshistory:require("../assets/images/leaveshistory.png"),
+  bottomblueimage:require("../assets/images/bottomblueimage.png")
 };
 export default images;
