@@ -14,6 +14,65 @@ import images from '../../utils/images';
 import { normalize } from '../../utils/normalizeHeightwidth';
 // import CustomHeader from "../customHeader";
 
+const hitSlop = {
+  top: 15,
+  left: 15,
+  right: 15,
+  bottom: 15
+}
+
+const customHeaderWithoutTitle = (
+  backIcon,
+  backnavigation,
+  backloginIcon,
+  leftblueimage,
+  rightblueimage
+) => {
+  return (
+    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+      {backIcon && (
+        <TouchableOpacity onPress={backnavigation}>
+          <Image
+            source={images.leftarrow}
+            style={{
+              marginTop: normalize(50),
+              marginLeft: normalize(24),
+            }}></Image>
+        </TouchableOpacity>
+      )}
+      {backloginIcon && (
+        <TouchableOpacity onPress={backnavigation}>
+          <Image
+            source={images.loginleftarrow}
+            style={{
+              marginTop: normalize(50),
+              marginLeft: normalize(24),
+            }}></Image>
+        </TouchableOpacity>
+      )}
+      {leftblueimage && (
+        <Image
+          source={images.lightblueborder}
+          style={{
+            alignSelf: 'flex-start',
+            height: normalize(100),
+            width: normalize(90),
+          }}></Image>
+      )}
+      {rightblueimage && (
+        <Image
+          source={images.rightblueborder}
+          style={{
+            alignSelf: 'flex-end',
+            height: normalize(80),
+            width: normalize(70),
+            position: 'relative',
+          }}></Image>
+      )}
+    </View>
+  )
+}
+
 const ScreenHOC = ({
   type = 'primary',
   barStyle = 'dark-content',
@@ -53,6 +112,7 @@ const ScreenHOC = ({
   backnavigation,
   customHeader = false,
   customHeaderHeading = '',
+  showHeaderWithoutTitle = false
 }) => {
   const [stateChange, setStateChanged] = useState(false);
 
@@ -61,7 +121,7 @@ const ScreenHOC = ({
       {!!safeAreaRequired && (
         <SafeAreaView
           style={{
-            backgroundColor: colors.white,
+            backgroundColor: colors.white
           }}
         />
       )}
@@ -70,22 +130,34 @@ const ScreenHOC = ({
           <View
             style={{
               flexDirection: 'row',
+              justifyContent: "space-between",
               // marginTop: normalize(30),
-              marginLeft: normalize(24),
+              marginHorizontal: normalize(24),
             }}>
-            <TouchableOpacity
-              onPress={backnavigation}
-              style={{ alignItems: 'flex-start' }}>
-              <Image source={images.leftarrow} />
-            </TouchableOpacity>
-            <Text
-              style={{
-                alignItems: 'center',
-                fontSize: 16,
-                marginLeft: normalize(110),
-              }}>
-              {customHeaderHeading}
-            </Text>
+            {backIcon && (
+              <TouchableOpacity
+                hitSlop={hitSlop}
+                activeOpacity={.6}
+                onPress={backnavigation}
+                style={{
+                  flex: 0,
+                  alignItems: 'flex-start'
+                }}>
+                <Image source={images.leftarrow} />
+              </TouchableOpacity>
+            )}
+            <View style={{
+              flex: 1,
+              alignItems: "center"
+            }}>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontFamily: fonts.Medium
+                }}>
+                {customHeaderHeading}
+              </Text>
+            </View>
           </View>
           <View
             style={{
@@ -96,47 +168,14 @@ const ScreenHOC = ({
           />
         </View>
       )}
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        {backIcon && (
-          <TouchableOpacity onPress={backnavigation}>
-            <Image
-              source={images.leftarrow}
-              style={{
-                marginTop: normalize(50),
-                marginLeft: normalize(24),
-              }}></Image>
-          </TouchableOpacity>
-        )}
-        {backloginIcon && (
-          <TouchableOpacity onPress={backnavigation}>
-            <Image
-              source={images.loginleftarrow}
-              style={{
-                marginTop: normalize(50),
-                marginLeft: normalize(24),
-              }}></Image>
-          </TouchableOpacity>
-        )}
-        {leftblueimage && (
-          <Image
-            source={images.lightblueborder}
-            style={{
-              alignSelf: 'flex-start',
-              height: normalize(100),
-              width: normalize(90),
-            }}></Image>
-        )}
-        {rightblueimage && (
-          <Image
-            source={images.rightblueborder}
-            style={{
-              alignSelf: 'flex-end',
-              height: normalize(80),
-              width: normalize(70),
-              position: 'relative',
-            }}></Image>
-        )}
-      </View>
+      {showHeaderWithoutTitle && customHeaderWithoutTitle(
+        backIcon,
+        backnavigation,
+        backloginIcon,
+        leftblueimage,
+        rightblueimage
+      )}
+      
       <View style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
         {showcalenderimage && (
           <Image
@@ -163,8 +202,6 @@ const ScreenHOC = ({
         {/* {showrightbluebox&& <Image source={images.smallbluebox} style={{alignSelf:"flex-end",marginTop:90}}/> } */}
       </View>
 
-
-
       {
         <StatusBar
           backgroundColor={
@@ -174,16 +211,6 @@ const ScreenHOC = ({
           barStyle={barStyle}
         />
       }
-
-      {/* <CustomHeader
-                defaultLocalLanguage={defaultLanguage}
-                showBackIcon={showBackIcon}
-                title={headerTitle}
-                showLanguageDropdown={showLanguageDropdown}
-                showBellIcon={showBellIcon}
-                onLanguageChange={languageHandler}
-                onBackPress={() => navigation.goBack()}
-                onRightPress={() => navigation.navigate("Settings")} /> */}
       <View style={{ flex: 1, ...containerStyle, borderWidth: 0 }}>
         {children}
       </View>

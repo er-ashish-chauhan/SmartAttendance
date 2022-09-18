@@ -246,6 +246,7 @@ const Register = ({navigation}) => {
       backnavigation={() => navigation.goBack()}
       leftblueimage={false}
       showcalenderimage={false}
+      showHeaderWithoutTitle={true}
       rightblueimage={true}>
       {circlesView()}
       <View style={[styles.loginview, {marginTop: normalize(40)}]}>

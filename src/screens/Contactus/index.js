@@ -21,12 +21,12 @@ const ContactUs = ({ navigation }) => {
   };
   return (
     <ScreenHOC
-      backIcon={false}
+      backIcon={true}
       title={false}
-      safeAreaRequired={true}
       showcalenderimage={false}
       leftblueimage={false}
       customHeader={true}
+      safeAreaRequired={true}
       customHeaderHeading={'Contact Us'}
       backnavigation={() => navigation.goBack()}>
       <View style={[styles.selectAttendance]}>{contactDetails()}</View>
