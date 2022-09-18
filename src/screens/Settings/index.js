@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  TextInput,
-  TouchableOpacity,
   Image,
   FlatList,
 } from 'react-native';
@@ -12,6 +10,7 @@ import { normalize } from '../../utils/normalizeHeightwidth';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { styles } from './styles';
 import images from '../../utils/images';
+import colors from '../../utils/colors';
 const Settings = ({ navigation }) => {
   const dropDownPicker = () => {
     const [open, setOpen] = useState(false);
@@ -97,6 +96,8 @@ const Settings = ({ navigation }) => {
     );
   };
 
+ 
+
   return (
     <ScreenHOC
       title={false}
@@ -105,6 +106,7 @@ const Settings = ({ navigation }) => {
       leftblueimage={false}
       customHeader={true}
       safeAreaRequired={true}
+      backgroundColor={colors.white}
       customHeaderHeading={'Settings'}
       backnavigation={() => navigation.goBack()}>
       <View style={[styles.selectAttendance]}>

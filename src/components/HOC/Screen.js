@@ -112,12 +112,13 @@ const ScreenHOC = ({
   backnavigation,
   customHeader = false,
   customHeaderHeading = '',
-  showHeaderWithoutTitle = false
+  showHeaderWithoutTitle = false,
+  backgroundColor = colors.light
 }) => {
   const [stateChange, setStateChanged] = useState(false);
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.light }}>
+    <View style={{ flex: 1, backgroundColor: backgroundColor }}>
       {!!safeAreaRequired && (
         <SafeAreaView
           style={{
@@ -175,7 +176,7 @@ const ScreenHOC = ({
         leftblueimage,
         rightblueimage
       )}
-      
+
       <View style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
         {showcalenderimage && (
           <Image

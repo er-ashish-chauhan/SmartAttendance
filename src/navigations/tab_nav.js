@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { DrawerActions } from "@react-navigation/native";
 import React from "react";
 import { Image } from "react-native";
+import Attendance from "../screens/Attendance";
 import Dashboard from "../screens/Dashboard";
 import Leaves from "../screens/Leaves";
 import Reports from "../screens/Reports";
@@ -46,7 +47,7 @@ export function TabNavigation(props) {
       />
       <Tab.Screen
         name={"Attendance"}
-        component={Dashboard}
+        component={Attendance}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Image

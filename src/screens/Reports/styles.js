@@ -1,7 +1,7 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
-import {normalize} from '../../utils/normalizeHeightwidth';
+import { normalize } from '../../utils/normalizeHeightwidth';
 
 export const styles = StyleSheet.create({
   loginview: {
@@ -40,23 +40,23 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: normalize(30),
   },
- 
-  
+
+
 
   detailcontainer: {
     height: normalize(60),
     borderWidth: 1,
     borderColor: colors.lightblue,
-justifyContent:"space-between",
-    marginTop:normalize(50),
+    justifyContent: "space-between",
+    marginTop: normalize(19),
     borderRadius: normalize(10),
     flexDirection: 'row',
     padding: normalize(20),
-    marginHorizontal:normalize(30)
+    marginHorizontal: normalize(30)
   },
-  cardcontainer:{
-    height:normalize(90),
-    width:normalize(150),
+  cardcontainer: {
+    height: normalize(90),
+    width: normalize(150),
     borderWidth: 1,
     borderColor: colors.lightblue,
     borderRadius: normalize(10),
@@ -70,7 +70,24 @@ justifyContent:"space-between",
     backgroundColor: colors.lightblue,
     alignSelf: 'center',
     padding: 6,
-    marginTop:20
+    marginTop: 20
   },
-
+  calendarContainer: {
+    borderTopWidth: 1.2,
+    borderBottomWidth: 1.2,
+    // marginHorizontal: normalize(-15),
+    padding: 20,
+    paddingVertical: 15,
+    borderTopColor: colors.theme_border,
+    borderBottomColor: colors.theme_border,
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  monthText: {
+    fontFamily: fonts.Bold,
+    fontSize: 14,
+    lineHeight: 16.1,
+    color: colors.primary,
+    marginRight: 7
+  },
 });

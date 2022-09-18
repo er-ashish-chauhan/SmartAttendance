@@ -158,6 +158,7 @@ const Dashboard = ({ navigation }) => {
       title={false}
       showcalenderimage={false}
       showHeaderWithoutTitle={true}
+      backgroundColor={colors.white}
       leftblueimage={true}>
       {detailsView()}
       {punchView()}
