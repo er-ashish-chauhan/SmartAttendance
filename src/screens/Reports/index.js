@@ -38,7 +38,7 @@ const Reports = ({navigation}) => {
     title={false}  
     showcalenderimage={false} 
     leftblueimage={false}
-    
+    safeAreaRequired={true}
      >
 <Text style={{alignSelf:"center",fontSize:16,marginTop:normalize(17)}}>
                 {"Monthly Reports"}
