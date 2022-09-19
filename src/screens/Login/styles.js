@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
     marginTop: normalize(70),
     backgroundColor: colors.lightblue,
     flex: 1,
-    borderRadius: 30,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
     padding: 30,
 
   },

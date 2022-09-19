@@ -35,7 +35,10 @@ const Dashboard = ({ navigation }) => {
             activeOpacity={0.6}
             onPress={() => navigation.navigate("Notification")}
             style={{ alignSelf: 'flex-end', marginRight: normalize(30) }}>
-            <Image source={images.bell}></Image>
+            <Image source={images.bell} style={{
+              width: 22,
+              height: 22
+            }}></Image>
           </TouchableOpacity>
         </View>
         <Text
