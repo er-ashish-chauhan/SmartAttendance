@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
   loginview: {
     backgroundColor: colors.lightblue,
     flex: 1,
-    borderRadius: 30,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
     padding: 30,
   },
   logintext: {

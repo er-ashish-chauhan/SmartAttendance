@@ -159,7 +159,7 @@ const CustomDrawerContent = (props) => {
                         style={{
                             marginBottom: 17
                         }}
-                        onPress={() => props.navigation.closeDrawer()}>
+                        onPress={() => props.navigation.navigate("AboutUs")}>
                         <Text style={styles.lableStyle}>
                             About Us
                         </Text>
@@ -170,7 +170,7 @@ const CustomDrawerContent = (props) => {
                         style={{
                             // marginBottom: 17
                         }}
-                        onPress={() => props.navigation.closeDrawer()}>
+                        onPress={() =>  props.navigation.navigate("Faqs")}>
                         <Text style={styles.lableStyle}>
                             FAQ
                         </Text>

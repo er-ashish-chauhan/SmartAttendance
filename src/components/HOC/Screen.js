@@ -79,29 +79,8 @@ const ScreenHOC = ({
   bottomSafeArea,
   children,
   containerStyle = {},
-  showBellIcon = true,
-  headerContainerStyle,
-  headerLeft,
-  headerRight,
-  headerTitle,
-  onBackPress,
   safeAreaRequired = false,
-  showBackIcon = false,
-  showHeader = false,
-  statusBarColor = 'white',
-  statusBarRequired = true,
-  titleStyle,
-  showMenuIcon,
-  onSelectDate,
-  onRightPress,
-  changeFilter,
-  showFilter,
-  rightText,
   backIcon = true,
-  navigation,
-  languageHandler = '',
-  showLanguageDropdown = false,
-  defaultLanguage = '',
   leftblueimage,
   rightblueimage = false,
   showcalenderimage = true,
@@ -112,12 +91,13 @@ const ScreenHOC = ({
   backnavigation,
   customHeader = false,
   customHeaderHeading = '',
-  showHeaderWithoutTitle = false
+  showHeaderWithoutTitle = false,
+  backgroundColor = colors.light
 }) => {
   const [stateChange, setStateChanged] = useState(false);
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.light }}>
+    <View style={{ flex: 1, backgroundColor: backgroundColor }}>
       {!!safeAreaRequired && (
         <SafeAreaView
           style={{
@@ -131,7 +111,7 @@ const ScreenHOC = ({
             style={{
               flexDirection: 'row',
               justifyContent: "space-between",
-              // marginTop: normalize(30),
+              alignItems: "center",
               marginHorizontal: normalize(24),
             }}>
             {backIcon && (
@@ -141,9 +121,12 @@ const ScreenHOC = ({
                 onPress={backnavigation}
                 style={{
                   flex: 0,
-                  alignItems: 'flex-start'
+                  alignItems: 'flex-start',
                 }}>
-                <Image source={images.leftarrow} />
+                <Image source={images.leftarrow} style={{
+                  height: 16,
+                  width: 21
+                }} />
               </TouchableOpacity>
             )}
             <View style={{
@@ -175,7 +158,7 @@ const ScreenHOC = ({
         leftblueimage,
         rightblueimage
       )}
-      
+
       <View style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
         {showcalenderimage && (
           <Image

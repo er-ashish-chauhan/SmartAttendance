@@ -5,8 +5,6 @@ import {normalize} from '../../utils/normalizeHeightwidth';
 
 export const styles = StyleSheet.create({
   selectAttendance: {
-    // height: normalize(80),
-    backgroundColor: 'red',
     flex: 1,
     backgroundColor: colors.white,
     paddingHorizontal: 15,

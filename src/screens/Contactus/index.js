@@ -4,6 +4,7 @@ import ScreenHOC from '../../components/HOC/Screen';
 import { styles } from './styles';
 import { normalize } from '../../utils/normalizeHeightwidth';
 import images from '../../utils/images';
+import colors from '../../utils/colors';
 
 const ContactUs = ({ navigation }) => {
   const contactDetails = () => {
@@ -19,6 +20,15 @@ const ContactUs = ({ navigation }) => {
       </View>
     );
   };
+
+  const bottomimageView = () => {
+    return (
+      <View style={{ marginBottom: normalize(-40), flex: 1, justifyContent: "flex-end" }}>
+        <Image source={images.bottomblueimage} />
+      </View>
+    )
+  }
+
   return (
     <ScreenHOC
       backIcon={true}
@@ -28,8 +38,10 @@ const ContactUs = ({ navigation }) => {
       customHeader={true}
       safeAreaRequired={true}
       customHeaderHeading={'Contact Us'}
+      backgroundColor={colors.white}
       backnavigation={() => navigation.goBack()}>
       <View style={[styles.selectAttendance]}>{contactDetails()}</View>
+      {bottomimageView()}
     </ScreenHOC>
   );
 };

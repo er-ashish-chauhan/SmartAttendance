@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, Image, TouchableOpacity} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import images from '../../utils/images';
-import {normalize} from '../../utils/normalizeHeightwidth';
-import {styles} from './styles';
-const Register = ({navigation}) => {
+import { normalize } from '../../utils/normalizeHeightwidth';
+import { styles } from './styles';
+const Register = ({ navigation }) => {
   const [email, setEmail] = useState();
   const onchangemail = text => {
     setEmail(text);
@@ -14,7 +14,7 @@ const Register = ({navigation}) => {
   const circlesView = () => {
     return (
       <View>
-        <View style={{flexDirection: 'row', marginTop: normalize(5)}}>
+        <View style={{ flexDirection: 'row', marginTop: normalize(5) }}>
           <View
             style={[
               styles.bluecircle,
@@ -35,7 +35,7 @@ const Register = ({navigation}) => {
 
           <View style={styles.dots}></View>
           <View style={styles.linebtwcircles}></View>
-          <View style={[styles.dots, {marginLeft: 0}]} />
+          <View style={[styles.dots, { marginLeft: 0 }]} />
           <View
             style={[
               styles.bluecircle,
@@ -53,9 +53,9 @@ const Register = ({navigation}) => {
             </Text>
           </View>
         </View>
-        <View style={{flexDirection: 'row'}}>
-          <Text style={{marginLeft: 60, marginTop: 10}}>Verify Employer</Text>
-          <Text style={{marginLeft: 60, marginTop: 10}}>Register Details</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <Text style={{ marginLeft: 60, marginTop: 10 }}>Verify Employer</Text>
+          <Text style={{ marginLeft: 60, marginTop: 10 }}>Register Details</Text>
         </View>
       </View>
     );
@@ -63,7 +63,7 @@ const Register = ({navigation}) => {
   const recognitionView = () => {
     return (
       <View>
-        <View style={{flexDirection: 'row', marginTop: normalize(20)}}>
+        <View style={{ flexDirection: 'row', marginTop: normalize(20) }}>
           <Image
             source={images.faceid}
             style={{
@@ -75,10 +75,10 @@ const Register = ({navigation}) => {
           />
           <Image
             source={images.fingerprint}
-            style={{height: normalize(35), width: normalize(35)}}
+            style={{ height: normalize(35), width: normalize(35) }}
           />
         </View>
-        <View style={{flexDirection: 'row', marginTop: normalize(10)}}>
+        <View style={{ flexDirection: 'row', marginTop: normalize(10) }}>
           <Text
             style={{
               marginLeft: normalize(95),
@@ -87,7 +87,7 @@ const Register = ({navigation}) => {
             }}>
             Facelock
           </Text>
-          <Text style={{color: '#ffff'}}>Fingerprint</Text>
+          <Text style={{ color: '#ffff' }}>Fingerprint</Text>
         </View>
       </View>
     );
@@ -96,7 +96,7 @@ const Register = ({navigation}) => {
     return (
       <View>
         <TouchableOpacity style={[styles.buttoncontainer]}>
-          <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
+          <Text style={{ color: '#000000', fontSize: 16, fontWeight: '500' }}>
             {'Register'}
           </Text>
         </TouchableOpacity>
@@ -125,7 +125,7 @@ const Register = ({navigation}) => {
   const detailsView = () => {
     return (
       <View>
-        <View style={[styles.inputContainer, {marginTop: 10}]}>
+        <View style={[styles.inputContainer, { marginTop: 10 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -137,7 +137,7 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
+        <View style={[styles.inputContainer, { marginTop: 24 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -149,7 +149,7 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
+        <View style={[styles.inputContainer, { marginTop: 24 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -161,7 +161,7 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
+        <View style={[styles.inputContainer, { marginTop: 24 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -173,7 +173,7 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
+        <View style={[styles.inputContainer, { marginTop: 24 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -185,7 +185,7 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
+        <View style={[styles.inputContainer, { marginTop: 24 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -197,7 +197,7 @@ const Register = ({navigation}) => {
             editable={true}
           />
         </View>
-        <View style={[styles.inputContainer, {marginTop: 24}]}>
+        <View style={[styles.inputContainer, { marginTop: 24 }]}>
           <TextInput
             value={email}
             onChangeText={text => onchangemail(text)}
@@ -249,8 +249,8 @@ const Register = ({navigation}) => {
       showHeaderWithoutTitle={true}
       rightblueimage={true}>
       {circlesView()}
-      <View style={[styles.loginview, {marginTop: normalize(40)}]}>
-      <View style={styles.imagecontainer}>
+      <View style={[styles.loginview, { marginTop: normalize(40) }]}>
+        <View style={styles.imagecontainer}>
           <Image
             source={images.userProfile}
             style={{
