@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         borderColor: colors.primary,
         padding: 10,
         borderRadius: 47,
-        width: 66,
+        // width: 66,
         height: 34,
         alignItems: "center",
     },
@@ -68,15 +68,9 @@ export const styles = StyleSheet.create({
     listDataContainer: {
         marginTop: 10
     },
-    itemContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginBottom: 14,
-        paddingLeft: 5,
-        paddingVertical: 5
-    },
+   
     dateText: {
-        fontFamily: fonts.Bold,
+        fontFamily: fonts.Medium,
         fontSize: 14,
         lineHeight: 16,
         color: colors.black
@@ -88,17 +82,27 @@ export const styles = StyleSheet.create({
         lineHeight: 16,
         color: "#16B643"
     },
-    locationText: {
-        fontSize: 10,
-        fontFamily: fonts.Medium,
-        lineHeight: 11.66,
-        color: colors.grat_A1A1A1
+    statustext:{
+        fontSize:12,
+        color:colors.black,
+        opacity:0.5,
+        lineHeight:14
     },
-    leaveApprovedContainer: {
-        flex: 1.42,
-    },
-    weekOffContainer: {
-        flex: 1.78,
-        alignItems: "center"
-    }
+cardcontainer:{
+    flex:1,
+   borderRadius:10,
+    marginTop:10,
+    padding:14,
+    borderWidth:1,
+    borderColor:colors.lightblue
+},
+buttoncontainer:{
+    alignSelf:"flex-end",
+    backgroundColor:"#FF0000",
+    width:normalize(105),
+    height:normalize(26),
+    borderRadius:47,
+    alignItems:"center",
+    justifyContent:"center"
+}
 });

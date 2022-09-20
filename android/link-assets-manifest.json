@@ -30,16 +30,12 @@
       "sha1": "c3d1da783e6431f0374af5f317980a499c66304e"
     },
     {
-      "path": "src/assets/fonts/Ionicons.ttf",
-      "sha1": "b5281fbfa43129abc3e412dd938cfcf0b77de999"
-    },
-    {
       "path": "src/assets/images/Rectangle.png",
       "sha1": "27f8f360fedcbc61030d6a0980dba2528cda7219"
     },
     {
       "path": "src/assets/images/attendanceicon.png",
-      "sha1": "6f301bfd4f78d11082e6bf89987ca7bb32fb04a9"
+      "sha1": "560f83274d2f4591691d70ab4b41a25b925cc93f"
     },
     {
       "path": "src/assets/images/backtologin.png",
@@ -47,10 +43,18 @@
     },
     {
       "path": "src/assets/images/bell.png",
-      "sha1": "e00e694e41442365d04950b17c299b5f6a80590c"
+      "sha1": "0da1853f5b631b09a88b29451eff3d42816430b8"
+    },
+    {
+      "path": "src/assets/images/bordertopline.png",
+      "sha1": "4799ff3c4a051f9ade60595182d5d969d64551f4"
     },
     {
       "path": "src/assets/images/bottomblueimage.png",
+      "sha1": "1081650fafa8e30cbbff8fc6454a25c8948df0e7"
+    },
+    {
+      "path": "src/assets/images/bottomblueimage_old.png",
       "sha1": "2b794acf098d55f0a41a97842c8909315e249e07"
     },
     {
@@ -58,32 +62,84 @@
       "sha1": "17d85bb01a427536d81f38dd6cec2d8c12feab88"
     },
     {
+      "path": "src/assets/images/calendarIcon.png",
+      "sha1": "ba1f7c8db89d86c6bfbb1730562e55553e3f785c"
+    },
+    {
+      "path": "src/assets/images/calendarIcon@2x.png",
+      "sha1": "310c63aac1bbe0f5b0c862b161f737a35a58acfa"
+    },
+    {
+      "path": "src/assets/images/calendarIcon@3x.png",
+      "sha1": "227f021518b9aab05ced38711e5337fb5c45de44"
+    },
+    {
       "path": "src/assets/images/camera.png",
-      "sha1": "de36884b62ea992ef688f3a3c04a9877d8ae842c"
+      "sha1": "53fb3312f54ee247c041321a25f7a7964442cd39"
     },
     {
       "path": "src/assets/images/code.png",
-      "sha1": "cecaa3f79b6c5e6fb7800ed22c7a64b748bf8c6e"
+      "sha1": "bfbc3762eced373d17f6c034bd5bbb4344754a19"
     },
     {
       "path": "src/assets/images/coffee.png",
       "sha1": "ca17aba83763bf10a136b045103ee9557bbb9bb6"
     },
     {
+      "path": "src/assets/images/envelope.png",
+      "sha1": "efa9f6a2e3bd49d214ce742f93ebcb43b9675651"
+    },
+    {
+      "path": "src/assets/images/envelope@2x.png",
+      "sha1": "59fff1ea9df2499906153056404e55c94b7b8b70"
+    },
+    {
+      "path": "src/assets/images/envelope@3x.png",
+      "sha1": "537457e921072802e6ac9cfc2749a10f096ea1c9"
+    },
+    {
+      "path": "src/assets/images/eye.png",
+      "sha1": "07b4163684ab4679ffb74e35a0de2cd723986302"
+    },
+    {
       "path": "src/assets/images/face-idIcon.png",
-      "sha1": "7ccc63c69a48060c5ca157661a1da7439c2ab9af"
+      "sha1": "4ffb38d173b323a67e66bbb00d053686ffc18631"
+    },
+    {
+      "path": "src/assets/images/facebook.png",
+      "sha1": "f7e2a7d513d724a8755d6a5aa073a9c19416c816"
+    },
+    {
+      "path": "src/assets/images/facebook@2x.png",
+      "sha1": "76409d2efef4ef8b847d7751f946727a128030d6"
+    },
+    {
+      "path": "src/assets/images/facebook@3x.png",
+      "sha1": "582201230c2688ff034091d9362c9743d46d0f07"
     },
     {
       "path": "src/assets/images/faceid.png",
-      "sha1": "02da8fcc6c58b010336bc0f44543b20faca22819"
+      "sha1": "e9898e5fecde6557b8e6dadea150fb280d56e6bd"
     },
     {
       "path": "src/assets/images/fingerprint.png",
-      "sha1": "dc6377edfb2cd1ad118876b84f62d64b7c4a980f"
+      "sha1": "e0b2626ef3b30bc3eeecd16efbb26048e1177b23"
     },
     {
       "path": "src/assets/images/fingerprintIcon.png",
-      "sha1": "695c127bc6477d9eec72721e063bd38316c05bd4"
+      "sha1": "e16bc552bf65c1ea1be60f4fc24cb953c0f1b709"
+    },
+    {
+      "path": "src/assets/images/globe.png",
+      "sha1": "e2ae8fc89cfd3295052fb6cdf631433b6703d681"
+    },
+    {
+      "path": "src/assets/images/globe@2x.png",
+      "sha1": "81773ffadcf493137006890f6f9e3a15bcfa51eb"
+    },
+    {
+      "path": "src/assets/images/globe@3x.png",
+      "sha1": "16a029267d338bd9f2d83f4dd3a68a51cbb15794"
     },
     {
       "path": "src/assets/images/hidden_eyes.png",
@@ -91,7 +147,19 @@
     },
     {
       "path": "src/assets/images/homeicon.png",
-      "sha1": "4c6c1976cd5fd88c2cf55e8590bb5f6f9aa69a7b"
+      "sha1": "da1711df485d0090b9122687df22dbcbeb98f361"
+    },
+    {
+      "path": "src/assets/images/iTunesArtwork@1x.png",
+      "sha1": "088c61e05e8cf5d598965dd2be6a13ff411288cd"
+    },
+    {
+      "path": "src/assets/images/iTunesArtwork@2x.png",
+      "sha1": "2201089951c2ae0b48f5013522ccfc6944ea5fa3"
+    },
+    {
+      "path": "src/assets/images/iTunesArtwork@3x.png",
+      "sha1": "bb246442e3cafd9bb5907d6493c6852c76055528"
     },
     {
       "path": "src/assets/images/indexHcl.png",
@@ -103,27 +171,75 @@
     },
     {
       "path": "src/assets/images/leavesicon.png",
-      "sha1": "51d9d19751e962535c4e7b55aa5758826194c870"
+      "sha1": "ef2c8aec3671b3f2ad4e9c806fe1c7f317a4970c"
     },
     {
       "path": "src/assets/images/leftarrow.png",
-      "sha1": "f5305f84bff91d2e3d93ef50368f1beb51c8078d"
+      "sha1": "60d476dfec1a2846a0ee122c817ead25277949dd"
+    },
+    {
+      "path": "src/assets/images/linkedin.png",
+      "sha1": "5cc45af3981790fec2f1817350bcbbc4e9e5ceb8"
+    },
+    {
+      "path": "src/assets/images/linkedin@2x.png",
+      "sha1": "f1d622d39f7ff00c9500d321cf4c5197963f224a"
+    },
+    {
+      "path": "src/assets/images/linkedin@3x.png",
+      "sha1": "48b28f3d576d7535b777475cdbf13f14b3e949ea"
     },
     {
       "path": "src/assets/images/loginleftarrow.png",
       "sha1": "d3011eee891144b5a05c630400b97d45fa41b110"
     },
     {
+      "path": "src/assets/images/logout.png",
+      "sha1": "0be13cefaca8286032bccaec4a5aabda6a79d4a6"
+    },
+    {
+      "path": "src/assets/images/logout@2x.png",
+      "sha1": "fba3d9b8dafd4d9341272267d3fd88ba398f5842"
+    },
+    {
+      "path": "src/assets/images/logout@3x.png",
+      "sha1": "58ea76d40157a371ab4eedcfc6784b36306a0ace"
+    },
+    {
       "path": "src/assets/images/mobile-alt.png",
-      "sha1": "59f359c628957388ae49d5c17ffaa7738b920677"
+      "sha1": "51f4b3f1a2e888771a9bda047a6a78bec737b8f7"
     },
     {
       "path": "src/assets/images/moreicon.png",
-      "sha1": "1511dcea6ff1093b4e1d96b25dc571b18b05c109"
+      "sha1": "b62ed1491bc305fedd73990cf7c8ff74c5509cf3"
     },
     {
       "path": "src/assets/images/o.png",
       "sha1": "db15a05fc055c1f54d5d60937eb80ffca36dd929"
+    },
+    {
+      "path": "src/assets/images/phone.png",
+      "sha1": "4763556e4133652b3f01cf8c8b2699f7ce30ecd3"
+    },
+    {
+      "path": "src/assets/images/phone@2x.png",
+      "sha1": "8b4165f9c142ed15203a8a2b7d15042cab292bfd"
+    },
+    {
+      "path": "src/assets/images/phone@3x.png",
+      "sha1": "5286601072293a4ce5cf8fff09fd73d142e190ff"
+    },
+    {
+      "path": "src/assets/images/plus.png",
+      "sha1": "236b9f937c9cb1f8437e2e7567acaaa1780a0d64"
+    },
+    {
+      "path": "src/assets/images/plus@2x.png",
+      "sha1": "5ab0a4c0140ec273b31c545c6245495e0d2f3ebc"
+    },
+    {
+      "path": "src/assets/images/plus@3x.png",
+      "sha1": "515be859fa2113979f94dec68a2802d4ab9ae849"
     },
     {
       "path": "src/assets/images/redEcllipse.png",
@@ -131,11 +247,19 @@
     },
     {
       "path": "src/assets/images/reportsicon.png",
-      "sha1": "0564d61c0ac028506aca2effcca6272b88275338"
+      "sha1": "5b0113322995a0a8cae9a9e28ad77282d03e4628"
     },
     {
       "path": "src/assets/images/rightarrow.png",
-      "sha1": "9cb6520e6e04ff2eae920037e14aa1b7160b07c7"
+      "sha1": "20584b860b01a463e8159e4a86ab7bb0e8bafa21"
+    },
+    {
+      "path": "src/assets/images/rightarrow@2x.png",
+      "sha1": "1b1da3822142b901548170502a2fb4131b8868f4"
+    },
+    {
+      "path": "src/assets/images/rightarrow@3x.png",
+      "sha1": "513161a63d610face1a032184513b85749ed6ebc"
     },
     {
       "path": "src/assets/images/rightborderblue.png",
@@ -143,7 +267,7 @@
     },
     {
       "path": "src/assets/images/sendReply.png",
-      "sha1": "113ad6eaa8817cf881434dd3d7cd1978c7defa7f"
+      "sha1": "e1b344d96812290b0531a5de29b61ebcad56ca19"
     },
     {
       "path": "src/assets/images/show_eyes.png",
@@ -163,7 +287,7 @@
     },
     {
       "path": "src/assets/images/tag.png",
-      "sha1": "45d3fe06130ab3b05d1e93d4d4f19091b20e9a98"
+      "sha1": "a8d287bc7f84a4141847603c2c37f890c2dc7c68"
     },
     {
       "path": "src/assets/images/user.png",
