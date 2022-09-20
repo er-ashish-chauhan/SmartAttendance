@@ -174,10 +174,10 @@ const LeavesHistory=({navigation})=>{
                            
                         />
                 </View>
-                {/* <View style={{zIndex:-9999}}>
-        <Image source={images.bottomblueimage} style={{position:"relative",zIndex:-9999,height:30,bottom:0,}} />
+                <View style={{zIndex:-9999}}>
+        <Image source={images.bottomblueimage} style={{position:"relative",zIndex:-9999,height:40,bottom:0,}} />
     
-                </View> */}
+                </View>
             </ScreenHOC>
     )
 }
