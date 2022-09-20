@@ -16,6 +16,7 @@ import EmployDetails from '../screens/EmploymentDetails';
 import LeaveApplication from '../screens/LeaveApplication';
 import AboutUs from '../screens/AboutUs';
 import FAQs from '../screens/Faqs';
+import LeavesHistory from '../screens/LeavesHistory';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,7 @@ export const StackNavigator = () => {
           <Stack.Screen name="PreviousTickets" component={PreviousTickets} />
           <Stack.Screen name="EmployDetails" component={EmployDetails} />
           <Stack.Screen name="LeaveApplication" component={LeaveApplication} />
+          <Stack.Screen name="LeavesHistory" component={LeavesHistory} />
           <Stack.Screen name="AboutUs" component={AboutUs} />
           <Stack.Screen name="Faqs" component={FAQs} />
         </>

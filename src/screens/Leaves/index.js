@@ -29,9 +29,11 @@ const Leaves = ({ navigation }) => {
 
   const bottomimageView = () => {
     return (
+    
       <View style={{ marginBottom: normalize(-40), flex: 1, justifyContent: "flex-end" }}>
         <Image source={images.bottomblueimage} />
       </View>
+ 
     )
   }
 
@@ -90,7 +92,7 @@ const Leaves = ({ navigation }) => {
           </Text>
         </View>
       </View>
-      <TouchableOpacity style={{ marginTop: normalize(20) }}>
+      <TouchableOpacity style={{ marginTop: normalize(20) }} onPress={()=>navigation.navigate('LeavesHistory')}>
         <Image source={images.leaveshistory} style={{ alignSelf: 'center' }} />
       </TouchableOpacity>
       <View style={styles.holidaytitlecontainer}>
