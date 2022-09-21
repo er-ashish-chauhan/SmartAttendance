@@ -17,14 +17,15 @@ export const styles = StyleSheet.create({
     roundBtnContainer: {
         borderWidth: 2,
         borderColor: colors.primary,
-        padding: 10,
+        padding: 8,
         borderRadius: 47,
-        // width: 66,
-        height: 34,
+        width: 63,
+        height: 30,
         alignItems: "center",
+        justifyContent: "center"
     },
     btnText: {
-        fontSize: 10,
+        fontSize: normalize(11),
         fontFamily: fonts.Bold,
         lineHeight: 11,
         color: colors.primary
@@ -68,7 +69,7 @@ export const styles = StyleSheet.create({
     listDataContainer: {
         marginTop: 10
     },
-   
+
     dateText: {
         fontFamily: fonts.Medium,
         fontSize: 14,
@@ -82,27 +83,28 @@ export const styles = StyleSheet.create({
         lineHeight: 16,
         color: "#16B643"
     },
-    statustext:{
-        fontSize:12,
-        color:colors.black,
-        opacity:0.5,
-        lineHeight:14
+    statustext: {
+        fontSize: 12,
+        color: colors.black,
+        opacity: 0.5,
+        lineHeight: 14
     },
-cardcontainer:{
-    flex:1,
-   borderRadius:10,
-    marginTop:10,
-    padding:14,
-    borderWidth:1,
-    borderColor:colors.lightblue
-},
-buttoncontainer:{
-    alignSelf:"flex-end",
-    backgroundColor:"#FF0000",
-    width:normalize(105),
-    height:normalize(26),
-    borderRadius:47,
-    alignItems:"center",
-    justifyContent:"center"
-}
+    cardcontainer: {
+        flex: 1,
+        borderRadius: 10,
+        marginTop: 10,
+        padding: 14,
+        borderWidth: 1,
+        borderColor: colors.lightblue,
+        backgroundColor: colors.white,
+    },
+    buttoncontainer: {
+        alignSelf: "flex-end",
+        backgroundColor: "#FF0000",
+        width: normalize(105),
+        height: normalize(26),
+        borderRadius: 47,
+        alignItems: "center",
+        justifyContent: "center"
+    }
 });

@@ -1,11 +1,19 @@
-import {StyleSheet} from 'react-native';
+import {
+  StyleSheet,
+  Dimensions
+} from 'react-native';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
-import {normalize} from '../../utils/normalizeHeightwidth';
+import { normalize } from '../../utils/normalizeHeightwidth';
+
+const {
+  width,
+  height
+} = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
   loginview: {
-    marginTop: normalize(70),
+    marginTop: normalize(50),
     backgroundColor: colors.lightblue,
     flex: 1,
     borderTopLeftRadius: 30,
@@ -23,12 +31,14 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderBottomColor: 'white',
-    paddingBottom: 5,
+    paddingBottom: 8,
+    justifyContent: "flex-start",
+    alignItems: "center"
   },
   buttoncontainer: {
     flexDirection: 'row',
-    width: normalize(300),
-    height: normalize(40),
+    width: width - 60,
+    height: normalize(45),
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
@@ -41,7 +51,7 @@ export const styles = StyleSheet.create({
     width: 40,
     borderRadius: 20,
     borderWidth: 1,
-borderColor:colors.lightblue,
+    borderColor: colors.lightblue,
     backgroundColor: colors.lightblue,
     marginLeft: 100,
     alignItems: 'center',
@@ -62,4 +72,39 @@ borderColor:colors.lightblue,
     height: 1,
     alignSelf: 'center',
   },
+  textInput: {
+    fontSize: 14,
+    fontFamily: fonts.Light,
+    fontWeight: "400",
+    lineHeight: 16,
+    color: colors.white,
+    height: normalize(46),
+  },
+  buttonText: {
+    fontFamily: fonts.Bold,
+    fontSize: 16,
+    lineHeight: 18.4,
+    color: colors.primary
+  },
+  descText: {
+    marginTop: 14,
+    fontFamily: fonts.Light,
+    fontWeight: "400",
+    fontSize: 14,
+    lineHeight: 22,
+    color: colors.white
+  },
+  backText: {
+    fontFamily: fonts.Light,
+    fontWeight: "400",
+    color: colors.white,
+    fontSize: 14,
+    lineHeight: 16,
+    marginLeft: 5
+  },
+  flexRow: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  }
 });

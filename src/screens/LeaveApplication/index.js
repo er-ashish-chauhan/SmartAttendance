@@ -20,8 +20,8 @@ const CustomerSupport = ({ navigation }) => {
         const [open, setOpen] = useState(false);
         const [value, setValue] = useState(null);
         const [items, setItems] = useState([
-            { label: 'Apple', value: 'apple' },
-            { label: 'Banana', value: 'banana' },
+            { label: 'Casual Leave', value: 'Casual Leave' },
+            { label: 'Sick Leave', value: 'Sick Leave' },
         ]);
         return (
             <DropDownPicker
@@ -29,6 +29,7 @@ const CustomerSupport = ({ navigation }) => {
                 disableBorderRadius={true}
                 placeholder="Leave Type"
                 arrowIconStyle={[styles.arrowIconsty]}
+                labelStyle={styles.textInput}
                 open={open}
                 value={value}
                 items={items}
@@ -55,41 +56,54 @@ const CustomerSupport = ({ navigation }) => {
                 {dropDownPicker()}
                 <View style={[styles.straightLine]}></View>
 
-                <View style={styles.flexFull}>
-                    <View style={[styles.flexHalf,{borderBottomWidth:1,borderColor:colors.lightblue}]}>
-                    </View>
-                    <View style={styles.flexHalf}>
-                        <TouchableOpacity style={{paddingLeft:normalize(50)}}>
+                <View style={[styles.flexFull, { marginTop: normalize(27) }]}>
+                    <TouchableOpacity
+                        activeOpacity={0.6}
+                        onPress={() => { }}
+                        style={[styles.inputContainer]}>
+                        <Text style={styles.dateStyle}>05 Sept, 2022</Text>
+                        <Image source={images.calendar_fill}
+                            style={{
+                                width: 13.27,
+                                height: 16,
+                                marginLeft: 27
+                            }}
+                            resizeMode="contain" />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.flexRow}>
+                        <Image source={images.plus}
+                            style={{
+                                width: 13.27,
+                                height: 16,
+                                marginLeft: 27
+                            }}
+                            resizeMode="contain" />
                         <Text style={styles.addTxt}> Add More Days</Text>
-                        </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
-                <View style={{marginTop:normalize(25)}}>
+                <View style={[styles.inputContainer, { marginTop: normalize(27) }]}>
                     <TextInput
                         value={''}
                         onChangeText={text => console.log(text)}
                         placeholder={'Reason'}
-                        multiline={true}
-                        placeholderTextColor={'#969696'}
                         underlineColorAndroid="transparent"
-                        allowFontScaling={false}
-                        editable={true}
+                        placeholderTextColor={colors.darkGray}
+                        style={[styles.textInput, {flex: 1}]}
                     />
-                    <View style={[styles.straightLine]} />
                 </View>
 
-                <TouchableOpacity style={[styles.buttoncontainer]}
-                    onPress={() => navigation.navigate('Dashboard')}
-                >
-                    <Text style={styles.submitTxt}>
+                <TouchableOpacity
+                    style={[styles.buttoncontainer]}
+                    onPress={() => navigation.goBack()}>
+                    <Text style={styles.buttonText}>
                         {'Apply Leave'}
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.buttoncontainer2]}
-                    onPress={() => navigation.navigate('Dashboard')}
-                >
-                    <Text style={[styles.submitTxt, { color: colors.lightblue }]}>
+                <TouchableOpacity
+                    style={[styles.buttoncontainer2]}
+                    onPress={() => navigation.goBack()}>
+                    <Text style={[styles.buttonText, { color: colors.lightblue }]}>
                         {'Cancel'}
                     </Text>
                 </TouchableOpacity>

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         marginTop: normalize(25)
     },
     ContactText: {
-        fontFamily: fonts.Thin,
+        fontFamily: fonts.Light,
         fontWeight: '400',
         fontSize: 14,
         lineHeight: 20,

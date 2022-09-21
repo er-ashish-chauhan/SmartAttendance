@@ -37,7 +37,26 @@ const images = {
   indexHcl: require('../assets/images/indexHcl.png'),
   rightarrow: require('../assets/images/rightarrow.png'),
   sendReply: require('../assets/images/sendReply.png'),
-  leaveshistory:require("../assets/images/leaveshistory.png"),
-  bottomblueimage:require("../assets/images/bottomblueimage.png")
+  leaveshistory: require("../assets/images/leaveshistory.png"),
+  bottomblueimage: require("../assets/images/bottomblueimage.png"),
+  globe: require("../assets/images/globe.png"),
+  eye_l: require("../assets/images/eye_l.png"),
+  at: require("../assets/images/at.png"),
+  lock: require("../assets/images/lock.png"),
+  idcard: require("../assets/images/id-card.png"),
+  briefcase: require("../assets/images/briefcase.png"),
+  contact: require("../assets/images/contact.png"),
+  email: require("../assets/images/email.png"),
+  usertie: require("../assets/images/user-tie.png"),
+  userR: require("../assets/images/userR.png"),
+  phone: require("../assets/images/phone.png"),
+  facebook: require("../assets/images/facebook.png"),
+  envelope: require("../assets/images/envelope.png"),
+  linkedin: require("../assets/images/linkedin.png"),
+  camera_white: require("../assets/images/camera_white.png"),
+  eyeIcon: require("../assets/images/eye.png"),
+  calendar_fill: require("../assets/images/calendar_fill.png"),
+  plus: require("../assets/images/plus.png"),
+  logout: require("../assets/images/logout.png")
 };
 export default images;

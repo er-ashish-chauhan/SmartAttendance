@@ -1,4 +1,7 @@
-import { StyleSheet } from 'react-native';
+import {
+    StyleSheet,
+    Platform
+} from 'react-native';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
 import { normalize } from '../../utils/normalizeHeightwidth';
@@ -17,14 +20,15 @@ export const styles = StyleSheet.create({
     roundBtnContainer: {
         borderWidth: 2,
         borderColor: colors.primary,
-        padding: 10,
+        padding: 8,
         borderRadius: 47,
-        width: 66,
-        height: 34,
+        width: 63,
+        height: 30,
         alignItems: "center",
+        justifyContent: "center"
     },
     btnText: {
-        fontSize: 10,
+        fontSize: Platform.OS == "android" ? normalize(11) : normalize(10),
         fontFamily: fonts.Bold,
         lineHeight: 11,
         color: colors.primary
@@ -61,7 +65,7 @@ export const styles = StyleSheet.create({
     },
     headingText: {
         fontFamily: fonts.Medium,
-        fontSize: 14,
+        fontSize: Platform.OS == "android" ? normalize(16) : normalize(13),
         lineHeight: 16.32,
         color: colors.black,
     },

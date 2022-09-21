@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import {
     View,
     Text,
-    TextInput,
     TouchableOpacity,
     Image,
     FlatList,
+    Dimensions
 } from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
 import { normalize } from '../../utils/normalizeHeightwidth';
@@ -13,6 +13,10 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import { styles } from './styles';
 import images from '../../utils/images';
 import colors from '../../utils/colors';
+
+const {
+    width
+} = Dimensions.get("window");
 
 const Notification = ({ navigation }) => {
 
@@ -30,10 +34,22 @@ const Notification = ({ navigation }) => {
             {
                 id: 4, read: false
             },
+            {
+                id: 5, read: true
+            },
+            {
+                id: 6, read: false
+            },
+            {
+                id: 7, read: true
+            },
         ];
-        return (
-            <View style={{ marginTop: normalize(8) }}>
 
+        return (
+            <View style={{
+                marginTop: normalize(8),
+                flex: 1
+            }}>
                 <FlatList
                     data={data}
                     renderItem={({ item }) => {
@@ -54,6 +70,13 @@ const Notification = ({ navigation }) => {
                         );
                     }}
                     keyExtractor={item => item.id}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{
+                        paddingBottom: width * 0.2,
+                    }}
+                    style={{
+                      
+                    }}
                 />
             </View>
         );
@@ -68,9 +91,17 @@ const Notification = ({ navigation }) => {
             safeAreaRequired={true}
             rightText={'Clear All'}
             customHeaderHeading={'Notifications'}
+            showClearAll={true}
             backnavigation={() => navigation.goBack()}>
-            <View style={[styles.selectAttendance]}>
+            <View style={[styles.selectAttendance, {paddingBottom: 30}]}>
                 {ListView()}
+            </View>
+            <View style={{
+                // zIndex: -9999,
+                position: "absolute",
+                bottom: 0
+            }}>
+                <Image source={images.bottomblueimage} />
             </View>
         </ScreenHOC>
     );

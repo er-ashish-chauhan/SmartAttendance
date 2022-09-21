@@ -1,54 +1,117 @@
-import React, {useState} from 'react';
-import {View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
+import React, { useState } from 'react';
+import {
+  View, Text,
+  TextInput,
+  TouchableOpacity,
+  Image
+} from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import images from '../../utils/images';
-import {normalize} from '../../utils/normalizeHeightwidth';
-import {styles} from './styles';
-const Resetpassword = ({navigation}) => {
-  const [email, setEmail] = useState();
-  const onchangemail = text => {
-    setEmail(text);
-  };
+import { showShortToast } from '../../utils/methods';
+import { normalize } from '../../utils/normalizeHeightwidth';
+import { styles } from './styles';
+
+const hitSlop = {
+  top: 15,
+  bottom: 15,
+  left: 15,
+  right: 15
+}
+
+const Resetpassword = ({ navigation }) => {
+  const [password, setPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
+
+
+  //method for handle reset password
+  const resetPwdHandler = () => {
+    if (!validateform()) return;
+    navigation.navigate('Login')
+  }
+
+
+  // method for validation 
+  const validateform = () => {
+    let flag = true;
+    if (password.trim().length == 0) {
+      showShortToast("Please enter new Password.");
+      flag = false;
+    }else if (confPassword.trim().length == 0) {
+      showShortToast("Please enter confirm Password.");
+      flag = false;
+    }else if (confPassword.trim() !== password.trim()) {
+      showShortToast("New password & confirm password not macthed.");
+      flag = false;
+    }
+
+    return flag;
+  }
 
   const DetailsView = () => {
     return (
       <View>
         <Text style={styles.logintext}>Reset Password</Text>
         <Text
-          style={{
-            color: '#ffff',
-            fontSize: 12,
-            marginTop: 10,
-            letterSpacing: 0.8,
-          }}>
+          style={styles.descText}>
           Type new password so that you can log into your registered accounte
           no. associated with account
         </Text>
 
-        <View style={[styles.inputContainer, {marginTop: 30}]}>
+        <View style={[styles.inputContainer, { marginTop: 30 }]}>
+          <Image source={images.lock} style={{
+            width: 14,
+            height: 18,
+            marginRight: 8
+          }} />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
-            placeholder={' @ New Password'}
-            multiline={false}
-            placeholderTextColor={'white'}
+            value={password}
+            onChangeText={text => setPassword(text)}
+            placeholder={'New Password'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
+            secureTextEntry={true}
+            autoCapitalize="none"
           />
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() => { }}
+            hitSlop={hitSlop}>
+            <Image source={images.eye_l} style={{
+              width: 21,
+              height: 14,
+              marginLeft: 8
+            }} />
+          </TouchableOpacity>
         </View>
-        <View style={[styles.inputContainer, {marginTop: 30}]}>
+        <View style={[styles.inputContainer, { marginTop: 30 }]}>
+          <Image source={images.lock} style={{
+            width: 14,
+            height: 18,
+            marginRight: 8
+          }} />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
-            placeholder={' @ Confirm Password'}
-            multiline={false}
-            placeholderTextColor={'white'}
+            value={confPassword}
+            onChangeText={text => setConfPassword(text)}
+            placeholder={'Confirm Password'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
+            secureTextEntry={true}
+            autoCapitalize="none"
           />
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() => { }}
+            hitSlop={hitSlop}>
+            <Image source={images.eye_l} style={{
+              width: 21,
+              height: 14,
+              marginLeft: 8
+            }} />
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -57,8 +120,8 @@ const Resetpassword = ({navigation}) => {
     return (
       <TouchableOpacity
         style={[styles.buttoncontainer]}
-        onPress={() => navigation.navigate('Login')}>
-        <Text style={{color: '#000000', fontSize: 16, fontWeight: '500'}}>
+        onPress={resetPwdHandler}>
+        <Text style={styles.buttonText}>
           {'Submit'}
         </Text>
       </TouchableOpacity>
@@ -70,11 +133,15 @@ const Resetpassword = ({navigation}) => {
       leftblueimage={true}
       showHeaderWithoutTitle={true}
       calendartext={'Attendance Tracker'}>
-      <Image source={images.smallbluebox} style={{alignSelf: 'flex-end'}} />
-      <View style={styles.loginview}>
+      <Image source={images.smallbluebox} style={{ alignSelf: 'flex-end' }} />
+      <KeyboardAwareScrollView
+        keyboardShouldPersistTaps="handled"
+        extraHeight={200}
+        automaticallyAdjustContentInsets={true}
+        showsVerticalScrollIndicator={false} style={styles.loginview}>
         {DetailsView()}
         {buttonsView()}
-      </View>
+      </KeyboardAwareScrollView>
     </ScreenHOC>
   );
 };

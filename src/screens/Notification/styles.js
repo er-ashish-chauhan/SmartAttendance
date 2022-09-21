@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
         },
         shadowOpacity: 0.4,
         shadowRadius: 3.49,
-    
-        elevation: 10
+        elevation: 10,
+        backgroundColor: colors.white,
       },
     straightLine: {
         flex: 0.006,

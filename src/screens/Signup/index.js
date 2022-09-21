@@ -1,13 +1,45 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import {
+  View, Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  Dimensions
+} from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import ScreenHOC from '../../components/HOC/Screen';
+import { images } from '../../utils';
 import colors from '../../utils/colors';
+import { showShortToast } from '../../utils/methods';
+import { normalize } from '../../utils/normalizeHeightwidth';
 import { styles } from './styles';
+
+const {
+  width
+} = Dimensions.get("window");
+
 const SignUp = ({ navigation }) => {
-  const [email, setEmail] = useState();
-  const onchangemail = text => {
-    setEmail(text);
-  };
+  const [employerCode, setEmployerCode] = useState("");
+  const [employerName, setEmployerName] = useState("");
+
+  //method for handle reset password
+  const verifyHandler = () => {
+    if (!validateform()) return;
+    navigation.navigate('Register')
+  }
+
+  // method for validation 
+  const validateform = () => {
+    let flag = true;
+    if (employerCode.trim().length == 0) {
+      showShortToast("Please enter valid employer code.");
+      flag = false;
+    } else if (employerName.trim().length == 0) {
+      showShortToast("Please enter employer name.");
+      flag = false;
+    }
+    return flag;
+  }
 
   const circlesView = () => {
     return (
@@ -48,49 +80,65 @@ const SignUp = ({ navigation }) => {
       </View>
     );
   };
+
   const DetailsView = () => {
     return (
       <View>
         <Text style={styles.logintext}>Enter Details To Verify Employer</Text>
-        <View style={[styles.inputContainer, { marginTop: 10 }]}>
+        <View style={[styles.inputContainer, { marginTop: normalize(36) }]}>
+          <Image source={images.idcard} style={{
+            width: 20,
+            height: 17,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            value={employerCode}
+            onChangeText={text => setEmployerCode(text)}
             placeholder={'Employer Code'}
-            multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
+            selectionColor={colors.white}
           />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.briefcase} style={{
+            width: 20,
+            height: 17,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            value={employerName}
+            onChangeText={text => setEmployerName(text)}
             placeholder={'Employer Name'}
-            multiline={false}
             placeholderTextColor={'white'}
-            underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            underlineColorAndroid={"transparent"}
+            style={styles.textInput}
+            selectionColor={colors.white}
           />
         </View>
       </View>
     );
   };
+
   const Buttonsview = () => {
     return (
       <View>
         <TouchableOpacity
+          activeOpacity={0.6}
           style={[styles.buttoncontainer]}
-          onPress={() => navigation.navigate('Register')}>
-          <Text style={{ color: '#000000', fontSize: 16, fontWeight: '500' }}>
+          onPress={verifyHandler}>
+          <Text style={styles.buttonText}>
             {'Verify Employer'}
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={{ alignSelf: 'center', marginTop: 20, color: '#ffff' }}>
+        <TouchableOpacity
+          style={{ alignItems: "center", marginTop: normalize(34) }}
+          activeOpacity={0.6}
+          onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.forgotText}>
             {' '}
             Already have an account? Login
           </Text>
@@ -98,16 +146,28 @@ const SignUp = ({ navigation }) => {
       </View>
     );
   };
+
   return (
     <ScreenHOC
-      backIcon={false} 
       showHeaderWithoutTitle={true}
+      backIcon={false}
       leftblueimage={true}>
+      <Image source={images.smallbluebox}
+        style={{
+          alignSelf: 'flex-end',
+          position: "absolute",
+          top: width * 0.25
+        }} />
       {circlesView()}
-      <View style={styles.loginview}>
+      <KeyboardAwareScrollView
+        keyboardShouldPersistTaps="handled"
+        automaticallyAdjustContentInsets={true}
+        showsVerticalScrollIndicator={false}
+        extraHeight={200}
+        style={styles.loginview}>
         {DetailsView()}
         {Buttonsview()}
-      </View>
+      </KeyboardAwareScrollView>
     </ScreenHOC>
   );
 };

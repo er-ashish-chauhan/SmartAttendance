@@ -56,28 +56,37 @@ const Reports = ({ navigation }) => {
     setAttendanceDate(updatedDate);
   }
 
-  const CardsView = (text) => {
+  const CardsView = (text, lable, type = "number") => {
     return (
       <View style={styles.cardcontainer}>
-        <View
-          style={[
-            styles.bluecircle,
-            {
-              backgroundColor: 'white',
-              borderColor: colors.lightblue,
-            },
-          ]}>
-          <Text
-            style={{
-              color: colors.lightblue,
-              fontSize: 18,
-              alignSelf: 'center',
-            }}>
-            01
-          </Text>
-        </View>
-        <Text style={{ fontSize: 14, alignSelf: "center", marginTop: normalize(5) }}>
-          {text}
+        {type == "time" ? (
+          <View style={{
+            marginTop: 17
+          }}>
+            <Text style={[styles.timeText, { textAlign: "center" }]}>
+              {text}
+            </Text>
+            <Text style={[styles.subtimeText, { marginTop: 0 }]}>{"HH:MM"}</Text>
+          </View>
+        ) : (
+          <View
+            style={[
+              styles.bluecircle,
+              {},
+            ]}>
+            <Text
+              style={{
+                color: colors.lightblue,
+                fontSize: 18,
+                alignSelf: 'center',
+              }}>
+              {text}
+            </Text>
+          </View>
+        )}
+
+        <Text style={styles.cardText}>
+          {lable}
         </Text>
       </View>
     )
@@ -118,29 +127,48 @@ const Reports = ({ navigation }) => {
       </View>
       {/* Details View */}
       <View style={styles.detailcontainer}>
-        <Text style={{ fontSize: 14 }}>
+        <Text style={styles.workingHours}>
           Total Working Hours
         </Text>
         <View style={{ flexDirection: "column" }}>
-          <Text style={{ fontSize: 14, color: colors.lightblue, alignItems: "flex-end" }}>
+          <Text style={styles.timeText}>
             37:40
           </Text>
-          <Text style={{ fontSize: 10, color: colors.lightblue, alignItems: "flex-end" }}>
+          <Text style={[styles.timeText, {
+            fontSize: 10,
+            lineHeight: 12,
+            textAlign: "right"
+          }]}>
             HH:MM
           </Text>
         </View>
       </View>
-      <View style={{ flexDirection: "row", marginHorizontal: 30, marginTop: normalize(15), justifyContent: "space-between" }}>
-        {CardsView("Total Absent")}
-        {CardsView("Over Time")}
+      <View style={{
+        flexDirection: "row",
+        marginHorizontal: 30,
+        marginTop: normalize(15),
+        justifyContent: "space-between"
+      }}>
+        {CardsView("01", "Total Absent")}
+        {CardsView("17:30", "Over Time", "time")}
       </View>
-      <View style={{ flexDirection: "row", marginHorizontal: 30, marginTop: normalize(15), justifyContent: "space-between" }}>
-        {CardsView("Early In")}
-        {CardsView("Total Present")}
+      <View style={{
+        flexDirection: "row",
+        marginHorizontal: 30,
+        marginTop: normalize(15),
+        justifyContent: "space-between"
+      }}>
+        {CardsView("02", "Early In")}
+        {CardsView("04", "Total Present")}
       </View>
-      <View style={{ flexDirection: "row", marginHorizontal: 30, marginTop: normalize(15), justifyContent: "space-between" }}>
-        {CardsView("Late Arrival")}
-        {CardsView("Early Out")}
+      <View style={{
+        flexDirection: "row",
+        marginHorizontal: 30,
+        marginTop: normalize(15),
+        justifyContent: "space-between"
+      }}>
+        {CardsView("07", "Late Arrival")}
+        {CardsView("10", "Early Out")}
       </View>
     </ScreenHOC>
   );

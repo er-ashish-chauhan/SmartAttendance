@@ -1,15 +1,65 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
+import {
+  View, Text, TextInput,
+  Image,
+  TouchableOpacity,
+  ScrollView
+} from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import images from '../../utils/images';
+import { showShortToast } from '../../utils/methods';
 import { normalize } from '../../utils/normalizeHeightwidth';
 import { styles } from './styles';
 const Register = ({ navigation }) => {
-  const [email, setEmail] = useState();
-  const onchangemail = text => {
-    setEmail(text);
-  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [designation, setDesignation] = useState("");
+  const [empCode, setEmpCode] = useState("");
+  const [password, setPassword] = useState("");
+  const [confrimPwd, setConfPassword] = useState("");
+
+  // method for handle registeration 
+
+  const registerationHandler = () => {
+    if (!validateform()) return;
+    navigation.navigate('Login')
+  }
+
+  // method for validation 
+  const validateform = () => {
+    let flag = true;
+    if (name.trim().length == 0) {
+      showShortToast("Please enter full name.");
+      flag = false;
+    }else if (email.trim().length == 0) {
+      showShortToast("Please enter valid email address.");
+      flag = false;
+    }else if (phone.trim().length == 0) {
+      showShortToast("Please enter phone number.");
+      flag = false;
+    }else if (designation.trim().length == 0) {
+      showShortToast("Please enter your designation.");
+      flag = false;
+    }else if (empCode.trim().length == 0) {
+      showShortToast("Please enter your employee code.");
+      flag = false;
+    }else if (password.trim().length == 0) {
+      showShortToast("Please enter new Password.");
+      flag = false;
+    }else if (confrimPwd.trim().length == 0) {
+      showShortToast("Please enter confirm Password.");
+      flag = false;
+    }else if (confrimPwd.trim() !== password.trim()) {
+      showShortToast("New password & confirm password not macthed.");
+      flag = false;
+    }
+
+    return flag;
+  }
 
   const circlesView = () => {
     return (
@@ -18,17 +68,10 @@ const Register = ({ navigation }) => {
           <View
             style={[
               styles.bluecircle,
-              {
-                backgroundColor: 'white',
-                borderColor: colors.lightblue,
-              },
+              {},
             ]}>
             <Text
-              style={{
-                color: colors.lightblue,
-                fontSize: 18,
-                alignSelf: 'center',
-              }}>
+              style={styles.indicatorText}>
               01
             </Text>
           </View>
@@ -44,11 +87,7 @@ const Register = ({ navigation }) => {
               },
             ]}>
             <Text
-              style={{
-                color: '#ffff',
-                fontSize: 18,
-                alignSelf: 'center',
-              }}>
+              style={styles.indicatorText}>
               02
             </Text>
           </View>
@@ -60,6 +99,7 @@ const Register = ({ navigation }) => {
       </View>
     );
   };
+
   const recognitionView = () => {
     return (
       <View>
@@ -92,152 +132,174 @@ const Register = ({ navigation }) => {
       </View>
     );
   };
+
   const registerandpolicyView = () => {
     return (
       <View>
-        <TouchableOpacity style={[styles.buttoncontainer]}>
-          <Text style={{ color: '#000000', fontSize: 16, fontWeight: '500' }}>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={registerationHandler}
+          style={[styles.buttoncontainer]}>
+          <Text style={styles.buttonText}>
             {'Register'}
           </Text>
         </TouchableOpacity>
-        <Text
-          style={{
-            color: '#ffff',
-            fontSize: 12,
-            alignSelf: 'center',
-            marginTop: 10,
-          }}>
-          By signing up you agree to our
-        </Text>
-        <Text
-          style={{
-            color: '#ffff',
-            fontSize: 12,
-            alignSelf: 'center',
-            textDecorationStyle: 'dashed',
-            marginTop: 10,
-          }}>
-          Terms and conditions & Privacy policy
-        </Text>
+        <View style={{ alignItems: "center", marginTop: normalize(26) }}>
+          <Text
+            style={[styles.forgotText, { textAlign: "center" }]}>
+            By signing up you agree to our {'\n'}
+            <Text style={{
+              textDecorationLine: "underline"
+            }}>Terms and conditions</Text> & <Text style={{
+              textDecorationLine: "underline"
+            }}>Privacy policy</Text>
+          </Text>
+        </View>
       </View>
     );
   };
+
   const detailsView = () => {
     return (
-      <View>
-        <View style={[styles.inputContainer, { marginTop: 10 }]}>
+      <View style={{ marginTop: normalize(30) }}>
+        <View style={[styles.inputContainer, {}]}>
+          <Image source={images.userR} style={{
+            width: 14,
+            height: 18,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            selectionColor={colors.white}
+            value={name}
+            onChangeText={text => setName(text)}
             placeholder={'Name'}
             multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
           />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.email} style={{
+            width: 16,
+            height: 18,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
+            selectionColor={colors.white}
             value={email}
-            onChangeText={text => onchangemail(text)}
+            onChangeText={text => setEmail(text)}
             placeholder={'Official Email'}
             multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
           />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.contact} style={{
+            width: 16,
+            height: 18,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            selectionColor={colors.white}
+            value={phone}
+            onChangeText={text => setPhone(text)}
             placeholder={'Phone Number'}
             multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
           />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.usertie} style={{
+            width: 14,
+            height: 18,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            selectionColor={colors.white}
+            value={designation}
+            onChangeText={text => setDesignation(text)}
             placeholder={'Designation'}
-            multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
           />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.briefcase} style={{
+            width: 16,
+            height: 18,
+            marginRight: 8
+          }}
+            resizeMode="contain" />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
-            placeholder={'Employer Code'}
-            multiline={false}
-            placeholderTextColor={'white'}
+            selectionColor={colors.white}
+            value={empCode}
+            onChangeText={text => setEmpCode(text)}
+            placeholder={'Employee Code'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={styles.textInput}
           />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.lock} style={{
+            width: 14,
+            height: 18,
+            marginRight: 8
+          }} />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            selectionColor={colors.white}
+            value={password}
+            onChangeText={text => setPassword(text)}
             placeholder={'Password'}
             multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={[styles.textInput, { flex: 1 }]}
+            secureTextEntry={true}
           />
+          <Image source={images.eye_l} style={{
+            width: 21,
+            height: 14,
+            marginLeft: 8
+          }} />
         </View>
         <View style={[styles.inputContainer, { marginTop: 24 }]}>
+          <Image source={images.lock} style={{
+            width: 14,
+            height: 18,
+            marginRight: 8
+          }} />
           <TextInput
-            value={email}
-            onChangeText={text => onchangemail(text)}
+            selectionColor={colors.white}
+            value={confrimPwd}
+            onChangeText={text => setConfPassword(text)}
             placeholder={'Confirm Password'}
             multiline={false}
-            placeholderTextColor={'white'}
+            placeholderTextColor={colors.white}
             underlineColorAndroid="transparent"
-            allowFontScaling={false}
-            editable={true}
+            style={[styles.textInput, { flex: 1 }]}
+            secureTextEntry={true}
           />
+          <Image source={images.eye_l} style={{
+            width: 21,
+            height: 14,
+            marginLeft: 8
+          }} />
         </View>
       </View>
     );
   };
-  const profileimageview = () => {
-    return (
-      <View>
-        <View style={styles.imagecontainer}>
-          <Image
-            source={images.userProfile}
-            style={{
-              height: normalize(65),
-              width: normalize(65),
-              alignSelf: 'center',
-            }}
-          />
-        </View>
-        <View style={styles.cameracontainer}>
-          <Image
-            source={images.camera}
-            style={{
-              height: normalize(16),
-              width: normalize(16),
-              alignSelf: 'center',
-            }}
-          />
-        </View>
-      </View>
-    );
-  };
+
   return (
     <ScreenHOC
       title={false}
@@ -249,31 +311,51 @@ const Register = ({ navigation }) => {
       showHeaderWithoutTitle={true}
       rightblueimage={true}>
       {circlesView()}
-      <View style={[styles.loginview, { marginTop: normalize(40) }]}>
-        <View style={styles.imagecontainer}>
-          <Image
-            source={images.userProfile}
-            style={{
-              height: normalize(65),
-              width: normalize(65),
-              alignSelf: 'center',
-            }}
-          />
+      <View style={{
+        marginTop: 26,
+        marginBottom: 18,
+        alignItems: "center"
+      }}>
+        <Text style={styles.logintext}>Enter Details To Register</Text>
+      </View>
+      <View
+        style={[styles.loginview, { marginTop: normalize(40) }]}>
+        <View>
+          <View style={styles.imagecontainer}>
+            <Image
+              source={images.userProfile}
+              style={{
+                height: normalize(65),
+                width: normalize(65),
+                alignSelf: 'center',
+              }}
+            />
+          </View>
+          <View style={styles.cameracontainer}>
+            <Image
+              source={images.camera}
+              style={{
+                height: normalize(16),
+                width: normalize(18),
+                alignSelf: 'center',
+              }}
+              resizeMode="contain"
+            />
+          </View>
         </View>
-        <View style={styles.cameracontainer}>
-          <Image
-            source={images.camera}
-            style={{
-              height: normalize(16),
-              width: normalize(16),
-              alignSelf: 'center',
-            }}
-          />
-        </View>
-        {/* {profileimageview()} */}
-        {detailsView()}
-        {recognitionView()}
-        {registerandpolicyView()}
+        <KeyboardAwareScrollView
+          keyboardShouldPersistTaps="handled"
+          extraHeight={200}
+          automaticallyAdjustContentInsets={true}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{
+            paddingBottom: normalize(80)
+          }}>
+          {detailsView()}
+          {recognitionView()}
+          {registerandpolicyView()}
+        </KeyboardAwareScrollView>
+
       </View>
     </ScreenHOC>
   );

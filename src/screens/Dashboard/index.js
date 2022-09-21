@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
+import {
+  View, Text,
+  Dimensions,
+  TouchableOpacity,
+  Image,
+  ScrollView
+} from 'react-native';
 import ScreenHOC from '../../components/HOC/Screen';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
 import images from '../../utils/images';
 import { normalize } from '../../utils/normalizeHeightwidth';
 import { styles } from './styles';
+import Icon from 'react-native-vector-icons/dist/MaterialIcons';
+
+const {
+  width
+} = Dimensions.get("window");
 
 const Dashboard = ({ navigation }) => {
   const [punchin, setPunchin] = useState(true);
@@ -13,59 +24,24 @@ const Dashboard = ({ navigation }) => {
 
   const detailsView = () => {
     return (
-      <View>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: -35,
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          <View>
-            <Text
-              style={{
-                alignSelf: 'center',
-                fontSize: normalize(18),
-                marginLeft: normalize(155),
-              }}>
-              Hi, John
-            </Text>
-          </View>
-          <TouchableOpacity
-            activeOpacity={0.6}
-            onPress={() => navigation.navigate("Notification")}
-            style={{ alignSelf: 'flex-end', marginRight: normalize(30) }}>
-            <Image source={images.bell} style={{
-              width: 22,
-              height: 22
-            }}></Image>
-          </TouchableOpacity>
-        </View>
+      <View style={{
+        marginTop: 20,
+        alignItems: "center"
+      }}>
         <Text
-          style={{ alignSelf: 'center', fontSize: normalize(18), marginTop: 20 }}>
+          style={styles.dateText}>
           Friday
         </Text>
         <Text
-          style={{ alignSelf: 'center', fontSize: normalize(18), marginTop: 18 }}>
+          style={[styles.dateText, { marginTop: normalize(2) }]}>
           26 Sept, 2022
         </Text>
         <Text
-          style={{
-            alignSelf: 'center',
-            fontSize: normalize(16),
-            marginTop: 20,
-            color: colors.lightblue,
-            fontFamily: fonts.Bold,
-          }}>
-          Punched in
+          style={styles.punchedText}>
+          Punched In
         </Text>
         <Text
-          style={{
-            alignSelf: 'center',
-            fontSize: normalize(26),
-            marginTop: 20,
-            fontFamily: fonts.Medium,
-          }}>
+          style={styles.timeText}>
           9:30 AM
         </Text>
       </View>
@@ -77,17 +53,17 @@ const Dashboard = ({ navigation }) => {
       <View style={{ flexDirection: 'row' }}>
         <Image source={images.squarebox} style={styles.squarebox}></Image>
         <View style={styles.punchinImagecontainer}>
-          <View style={styles.punchin}>
-            <TouchableOpacity
-              onPress={() => {
-                setPunchin(!punchin);
-              }}>
-              <Image source={images.switch} style={styles.switch}></Image>
-              <Text style={styles.punchtext}>
-                {punchin ? 'Punch In' : 'Punch Out'}
-              </Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            activeOpacity={0.6}
+            style={styles.punchin}
+            onPress={() => {
+              setPunchin(!punchin);
+            }}>
+            <Image source={images.switch} style={styles.switch}></Image>
+            <Text style={styles.punchtext}>
+              {punchin ? 'Punch In' : 'Punch Out'}
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -96,8 +72,16 @@ const Dashboard = ({ navigation }) => {
   const breakView = () => {
     return (
       <View style={{ flexDirection: 'row' }}>
-        <Text style={styles.locationtext}> Sec 32, Gurugram</Text>
-
+        <View style={{
+          flexDirection: "row",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          marginLeft: width * 0.33,
+          marginTop: normalize(20),
+        }}>
+          <Icon name='location-on' color={colors.grat_A1A1A1} size={12} />
+          <Text style={styles.locationtext}> Sec 32, Gurugram</Text>
+        </View>
         <View style={styles.eclipseborder}>
           <Image source={images.coffee} style={{ alignSelf: 'center' }} />
         </View>
@@ -112,14 +96,22 @@ const Dashboard = ({ navigation }) => {
           <Text style={styles.detailcontainertext}>
             Punch In
           </Text>
-          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
+          <Text style={[styles.detailcontainertext, {
+            marginTop: 2,
+            color: colors.lightblue,
+            fontSize: 16
+          }]}>
             09:30:24
           </Text>
 
           <Text style={[styles.detailcontainertext, { marginTop: 5 }]}>
             Punch Out
           </Text>
-          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
+          <Text style={[styles.detailcontainertext, {
+            marginTop: 2,
+            color: colors.lightblue,
+            fontSize: 16
+          }]}>
             09:30:24
           </Text>
         </View>
@@ -127,14 +119,22 @@ const Dashboard = ({ navigation }) => {
           <Text style={styles.detailcontainertext}>
             Break Hours
           </Text>
-          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
+          <Text style={[styles.detailcontainertext, {
+            marginTop: 2,
+            color: colors.lightblue,
+            fontSize: 16
+          }]}>
             00:00:00
           </Text>
 
           <Text style={[styles.detailcontainertext, { marginTop: 5 }]}>
             Status
           </Text>
-          <Text style={[styles.detailcontainertext, { marginTop: 2, color: "#16B643" }]}>
+          <Text style={[styles.detailcontainertext, {
+            marginTop: 2,
+            color: "#16B643",
+            fontSize: 16
+          }]}>
             Present
           </Text>
         </View>
@@ -143,7 +143,11 @@ const Dashboard = ({ navigation }) => {
           <Text style={styles.detailcontainertext}>
             Total Hours
           </Text>
-          <Text style={[styles.detailcontainertext, { marginTop: 2, color: colors.lightblue }]}>
+          <Text style={[styles.detailcontainertext, {
+            marginTop: 2,
+            color: colors.lightblue,
+            fontSize: 16
+          }]}>
             00:00:00
           </Text>
 
@@ -162,11 +166,21 @@ const Dashboard = ({ navigation }) => {
       showcalenderimage={false}
       showHeaderWithoutTitle={true}
       backgroundColor={colors.white}
-      leftblueimage={true}>
-      {detailsView()}
-      {punchView()}
-      {breakView()}
-      {timedetailsView()}
+      dashboardHeader={true}
+      customHeaderHeading="Hi John"
+      navigation={navigation}
+    >
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{}}
+        contentContainerStyle={{
+          paddingBottom: width * 0.15
+        }} >
+        {detailsView()}
+        {punchView()}
+        {breakView()}
+        {timedetailsView()}
+      </ScrollView>
     </ScreenHOC>
   );
 };

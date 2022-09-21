@@ -1,7 +1,14 @@
-import {StyleSheet} from 'react-native';
+import {
+  StyleSheet,
+  Dimensions
+} from 'react-native';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
-import {normalize} from '../../utils/normalizeHeightwidth';
+import { normalize } from '../../utils/normalizeHeightwidth';
+
+const {
+  width
+} = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
   selectAttendance: {
@@ -10,13 +17,18 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   ContactText: {
-    fontFamily: fonts.Thin,
+    fontFamily: fonts.Light,
     fontWeight: '400',
     fontSize: 14,
     lineHeight: 20,
     color: colors.black,
-    marginHorizontal: normalize(40),
+    // marginHorizontal: normalize(40),
     textAlign: 'center',
+  
+  },
+  contentContainer: {
+    alignItems: "center",
+    marginHorizontal: normalize(30)
   },
   ContactHeading: {
     fontFamily: fonts.Thin,
@@ -28,9 +40,22 @@ export const styles = StyleSheet.create({
     marginTop: 30,
   },
   imgHcl: {
-    width: normalize(120),
-    height: normalize(101),
-    marginTop: 30,
-    alignSelf: 'center',
+    width: normalize(135),
+    height: normalize(116),
+    marginTop: 21,
+    // alignSelf: 'center',
   },
+  flexRow: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center"
+  },
+  contactText: {
+    fontSize: 14,
+    lineHeight: 26,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    color: colors.black,
+    marginLeft: 8
+  }
 });

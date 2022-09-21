@@ -5,9 +5,9 @@ import colors from '../../utils/colors';
 import images from '../../utils/images';
 import { normalize } from '../../utils/normalizeHeightwidth';
 import { styles } from './styles';
-
+import fonts from '../../utils/fonts';
 const Leaves = ({ navigation }) => {
-  
+
   const holidaysList = (text) => {
     return (
       <View
@@ -17,11 +17,11 @@ const Leaves = ({ navigation }) => {
           paddingHorizontal: 30,
           marginTop: normalize(20),
         }}>
-        <Text style={{ fontSize: 14, alignSelf: 'center', color: '#0079FF' }}>
+        <Text style={styles.lableText}>
           {text}
         </Text>
-        <Text style={{ fontSize: 14, alignSelf: 'center', }}>
-          {'Aug 12 ,2022'}
+        <Text style={[styles.lableText, { color: colors.black }]}>
+          {'Aug 12, 2022'}
         </Text>
       </View>
     )
@@ -29,11 +29,11 @@ const Leaves = ({ navigation }) => {
 
   const bottomimageView = () => {
     return (
-    
-      <View style={{ marginBottom: normalize(-40), flex: 1, justifyContent: "flex-end" }}>
+      <View style={{
+        flex: 1, justifyContent: "flex-end"
+      }}>
         <Image source={images.bottomblueimage} />
       </View>
- 
     )
   }
 
@@ -54,12 +54,19 @@ const Leaves = ({ navigation }) => {
           marginTop: normalize(20),
           justifyContent: 'space-between',
         }}>
-        <Text style={{ fontSize: 14, alignSelf: 'flex-end' }}>{'My Leaves'}</Text>
+        <Text style={[styles.lableText, {
+          alignSelf: 'flex-end',
+          color: colors.black
+        }]}>{'My Leave'}</Text>
         <TouchableOpacity
           style={[styles.buttoncontainer]}
           onPress={() => navigation.navigate('LeaveApplication')}>
-          <Text style={{ color: '#FFFFFF', fontSize: 12, fontWeight: '500' }}>
-            {'Apply Leaves'}
+          <Text style={[styles.lableText, {
+            color: '#FFFFFF',
+            fontSize: 12,
+            fontFamily: fonts.Bold
+          }]}>
+            {'Apply Leave'}
           </Text>
         </TouchableOpacity>
       </View>
@@ -68,10 +75,10 @@ const Leaves = ({ navigation }) => {
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Text
             style={{ fontSize: 16, color: '#FF0000', flex: 0.3 }}>
-            01
+            02
           </Text>
           <Text style={{ fontSize: 16, color: '#16B643', flex: 0.4 }}>
-            01
+            03
           </Text>
           <Text style={{ fontSize: 16, color: '#16B643', flex: 0.22 }}>
             01
@@ -83,23 +90,46 @@ const Leaves = ({ navigation }) => {
             justifyContent: 'space-between',
             marginTop: 4,
           }}>
-          <Text style={{ fontSize: 12, alignSelf: 'flex-start' }}>
+          <Text style={[styles.lableText, {
+            alignSelf: 'flex-start',
+            fontSize: 12,
+            color: colors.black
+          }]}>
             Sick Leaves
           </Text>
-          <Text style={{ fontSize: 12, alignSelf: 'center' }}>Annual Leaves</Text>
-          <Text style={{ fontSize: 12, alignSelf: 'flex-end' }}>
+          <Text style={[styles.lableText, {
+            alignSelf: 'center',
+            fontSize: 12,
+            color: colors.black
+          }]}>Annual Leaves</Text>
+          <Text style={[styles.lableText, {
+            alignSelf: 'flex-end',
+            fontSize: 12,
+            color: colors.black
+          }]}>
             Casual Leaves
           </Text>
         </View>
       </View>
-      <TouchableOpacity style={{ marginTop: normalize(20) }} onPress={()=>navigation.navigate('LeavesHistory')}>
-        <Image source={images.leaveshistory} style={{ alignSelf: 'center' }} />
+      <TouchableOpacity
+        style={[styles.flexRow, { marginTop: normalize(20), alignSelf: "center" }]}
+        onPress={() => navigation.navigate('LeavesHistory')}>
+        <Text style={[styles.lableText, { marginRight: 5 }]}>Leaves History</Text>
+        <Image
+          source={images.rightarrow}
+          style={{
+            width: 14,
+            height: 14,
+            marginTop: 2.5
+          }}
+          resizeMode="contain"
+        />
       </TouchableOpacity>
       <View style={styles.holidaytitlecontainer}>
-        <Text style={{ fontSize: 16, alignSelf: 'center' }}>
+        <Text style={[styles.lableText, { fontSize: 16, alignSelf: 'center', color: colors.black }]}>
           {'Holiday Name'}
         </Text>
-        <Text style={{ fontSize: 16, alignSelf: 'center', flex: 0.4 }}>
+        <Text style={[styles.lableText, { fontSize: 16, alignSelf: 'center', flex: 0.37, color: colors.black }]}>
           {'Date'}
         </Text>
       </View>

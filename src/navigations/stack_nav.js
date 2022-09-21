@@ -17,6 +17,8 @@ import LeaveApplication from '../screens/LeaveApplication';
 import AboutUs from '../screens/AboutUs';
 import FAQs from '../screens/Faqs';
 import LeavesHistory from '../screens/LeavesHistory';
+import Profile from '../screens/Profile';
+import ChangePassword from '../screens/ChangePassword';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +53,8 @@ export const StackNavigator = () => {
           <Stack.Screen name="LeavesHistory" component={LeavesHistory} />
           <Stack.Screen name="AboutUs" component={AboutUs} />
           <Stack.Screen name="Faqs" component={FAQs} />
+          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="ChangePassword" component={ChangePassword} />
         </>
       ) : (
         <>

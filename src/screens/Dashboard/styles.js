@@ -1,7 +1,14 @@
-import {StyleSheet} from 'react-native';
+import {
+  StyleSheet,
+  Dimensions
+} from 'react-native';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
-import {normalize} from '../../utils/normalizeHeightwidth';
+import { normalize } from '../../utils/normalizeHeightwidth';
+
+const {
+  width
+} = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
   loginview: {
@@ -22,13 +29,14 @@ export const styles = StyleSheet.create({
     marginTop: normalize(115),
   },
   punchinImagecontainer: {
-    marginLeft: normalize(38),
+    marginLeft: width * 0.1,
     marginTop: 20,
-    height: normalize(168),
-    width: normalize(168),
+    height: normalize(178),
+    width: normalize(178),
     borderRadius: normalize(30),
     backgroundColor: '#B2D7FA',
-    padding: 10,
+    padding: 12,
+    alignItems: "center",
   },
   punchin: {
     height: normalize(150),
@@ -43,16 +51,16 @@ export const styles = StyleSheet.create({
   punchtext: {
     color: '#FFFFFF',
     fontSize: 18,
-    fontFamily: fonts.Light,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
     alignSelf: 'center',
-    marginTop: normalize(15),
+    marginTop: 15,
+    lineHeight: 17
   },
   locationtext: {
     color: '#000000',
     opacity: 0.7,
-    marginLeft: normalize(120),
     fontSize: 14,
-    marginTop: normalize(20),
   },
   eclipseborder: {
     height: normalize(44),
@@ -63,24 +71,25 @@ export const styles = StyleSheet.create({
     backgroundColor: '#FF0000',
     alignItems: 'center',
     padding: normalize(8),
-    marginLeft: 70,
+    marginLeft: 60,
     marginTop: -20,
   },
   detailcontainer: {
-    height: normalize(115),
+    height: normalize(125),
     borderWidth: 1,
     borderColor: colors.lightblue,
-
-    marginTop:normalize(50),
+    marginTop: normalize(50),
     borderRadius: normalize(10),
     flexDirection: 'row',
     padding: 10,
-    marginHorizontal:normalize(30)
+    marginHorizontal: normalize(30)
   },
   detailcontainertext: {
-    fontSize: normalize(14),
-    lineHeight: normalize(22),
-    color: '#000000',
+    fontSize: 14,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    lineHeight: 22,
+    color: colors.black,
   },
   divider: {
     height: 78,
@@ -90,4 +99,24 @@ export const styles = StyleSheet.create({
     marginLeft: normalize(20),
     alignSelf: 'center',
   },
+  dateText: {
+    fontSize: normalize(18),
+    color: colors.black,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    lineHeight: 27
+  },
+  punchedText: {
+    fontSize: 16,
+    marginTop: 20,
+    color: colors.primary,
+    fontFamily: fonts.Bold,
+  },
+  timeText: {
+    fontSize: 28,
+    color: colors.black,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    marginTop: 11
+  }
 });

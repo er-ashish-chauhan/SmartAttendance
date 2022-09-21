@@ -104,7 +104,7 @@ const FAQs = ({ navigation }) => {
                     </TouchableOpacity>
                     {_item?.selected && (
                         <View>
-                            <Text style={[styles.questext, { fontWeight: "400" }]}>A. {_item.answer}</Text>
+                            <Text style={[styles.answerText]}>A. {_item.answer}</Text>
                         </View>
                     )}
                 </View>

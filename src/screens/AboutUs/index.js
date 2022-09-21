@@ -11,7 +11,7 @@ const AboutUs = ({ navigation }) => {
 
     const bottomimageView = () => {
         return (
-            <View style={{ marginBottom: normalize(-40), flex: 1, justifyContent: "flex-end" }}>
+            <View style={{ flex: 1, justifyContent: "flex-end" }}>
                 <Image source={images.bottomblueimage} />
             </View>
         )
@@ -32,9 +32,9 @@ const AboutUs = ({ navigation }) => {
                 <Text style={styles.ContactText}>
 
                     Marshmallow brownie powder jelly-o bonbon. Cake pastry shortbread croissant bonbon dragée chocolate cake chupa chups. Brownie tiramisu gummies powder brownie lollipop candy caramels pastry. Gingerbread dessert tiramisu tiramisu marzipan tart jelly sugar plum chocolate.
-
+                    {'\n'}{'\n'}
                     Soufflé candy cupcake brownie brownie macaroon. Jelly chocolate bar cake tart chocolate bar chupa chups. Oat cake caramels macaroon topping lemon drops. Muffin marshmallow pastry cheesecake donut cotton candy apple pie toffee cake.
-
+                    {'\n'}{'\n'}
                     Apple pie pastry liquorice marshmallow pie marzipan cheesecake. Bonbon tiramisu muffin danish caramels topping jelly-o gummi bears. Chocolate cake fruitcake cupcake cotton candy cookie tiramisu biscuit gummi bears. Soufflé macaroon carrot cake sweet roll cotton candy.
 
                 </Text>

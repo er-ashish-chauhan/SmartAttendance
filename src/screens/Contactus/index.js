@@ -1,4 +1,9 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  Text,
+  View,
+  TouchableOpacity
+} from 'react-native';
 import React from 'react';
 import ScreenHOC from '../../components/HOC/Screen';
 import { styles } from './styles';
@@ -10,20 +15,64 @@ const ContactUs = ({ navigation }) => {
   const contactDetails = () => {
     return (
       <View style={{ marginTop: normalize(30) }}>
-        <Text style={styles.ContactText}>
-          Dessert brownie tootsie roll caramels cookie. Tart pie brownie sesame
-          snaps bonbon marshmallow jelly-o. Sweet roll marzipan cotton candy
-          chocolate bar.
-        </Text>
-        <Text style={styles.ContactHeading}>Contact Details</Text>
-        <Image source={images.indexHcl} style={[styles.imgHcl]} />
+        <View style={styles.contentContainer}>
+          <Text style={styles.ContactText}>
+            Dessert brownie tootsie roll caramels cookie. Tart pie brownie sesame
+            snaps bonbon marshmallow jelly-o. Sweet roll marzipan cotton candy
+            chocolate bar.
+          </Text>
+        </View>
+        <View style={{
+          alignItems: "center"
+        }}>
+          <Text style={styles.ContactHeading}>Contact Details</Text>
+          <Image
+            source={images.indexHcl}
+            style={[styles.imgHcl]}
+            resizeMode="contain" />
+
+          <View style={{ marginTop: 16 }}>
+            <TouchableOpacity style={styles.flexRow}>
+              <Image source={images.phone} style={{
+                width: 14,
+                height: 16
+              }}
+                resizeMode="contain" />
+              <Text style={styles.contactText}>987654321</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.flexRow}>
+              <Image source={images.envelope} style={{
+                width: 16,
+                height: 16
+              }}
+                resizeMode="contain" />
+              <Text style={styles.contactText}>info@helpdesk.com</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.flexRow}>
+              <Image source={images.facebook} style={{
+                width: 14,
+                height: 16
+              }}
+                resizeMode="contain" />
+              <Text style={styles.contactText}>/CompanyFBPage</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.flexRow}>
+              <Image source={images.linkedin} style={{
+                width: 14,
+                height: 16
+              }}
+                resizeMode="contain" />
+              <Text style={styles.contactText}>/CompanyLinkedinPage</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     );
   };
 
   const bottomimageView = () => {
     return (
-      <View style={{ marginBottom: normalize(-40), flex: 1, justifyContent: "flex-end" }}>
+      <View style={{ flex: 1, justifyContent: "flex-end" }}>
         <Image source={images.bottomblueimage} />
       </View>
     )

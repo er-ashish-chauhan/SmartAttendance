@@ -84,7 +84,7 @@ const CustomDrawerContent = (props) => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     activeOpacity={0.6}
-                    onPress={() => props.navigation.navigate("EmployDetails")}
+                    onPress={() => props.navigation.navigate("Profile")}
                     style={[styles.flexRow,
                     { marginTop: 17, marginLeft: 26, marginRight: 10 }]}>
                     <View style={{
@@ -184,7 +184,14 @@ const CustomDrawerContent = (props) => {
                             marginTop: 26
                         }]}
                         onPress={() => props.navigation.navigate("Login")}>
-                        <Icon name="md-exit-outline" size={25} color={colors.danger} />
+                        <Image 
+                            source={images.logout}
+                            resizeMode="contain"
+                            style={{
+                                height: 16,
+                                width: 16
+                            }}
+                        />
                         <Text style={[styles.lableStyle, { color: colors.danger, marginLeft: 7 }]}>
                             Logout
                         </Text>

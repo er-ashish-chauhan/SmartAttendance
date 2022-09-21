@@ -151,25 +151,25 @@ const Attendance = ({ navigation }) => {
                     marginTop: normalize(13),
                     flexWrap: "wrap"
                 }]}>
-                <View style={{ marginRight: 7 }}>
+                <View style={{ marginRight: 2 }}>
                     {RoundedButton(
                         "Absent",
                         () => { }
                     )}
                 </View>
-                <View style={{ marginRight: 7 }}>
+                <View style={{ marginRight: 2 }}>
                     {RoundedButton(
                         "Early In",
                         () => { }
                     )}
                 </View>
-                <View style={{ marginRight: 7 }}>
+                <View style={{ marginRight: 2 }}>
                     {RoundedButton(
                         "Early Out",
                         () => { }
                     )}
                 </View>
-                <View style={{ marginRight: 7 }}>
+                <View style={{ marginRight: 2 }}>
                     {RoundedButton(
                         "Late In",
                         () => { }

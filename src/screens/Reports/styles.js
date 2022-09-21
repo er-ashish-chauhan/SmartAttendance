@@ -40,37 +40,38 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: normalize(30),
   },
-
-
-
   detailcontainer: {
-    height: normalize(60),
+    minHeight: normalize(60),
     borderWidth: 1,
     borderColor: colors.lightblue,
-    justifyContent: "space-between",
     marginTop: normalize(19),
     borderRadius: normalize(10),
     flexDirection: 'row',
-    padding: normalize(20),
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: normalize(20),
+    paddingVertical: normalize(14),
     marginHorizontal: normalize(30)
   },
   cardcontainer: {
-    height: normalize(90),
+    minHeight: normalize(90),
     width: normalize(150),
     borderWidth: 1,
     borderColor: colors.lightblue,
     borderRadius: normalize(10),
+    alignItems: "center"
   },
   bluecircle: {
     height: 40,
     width: 40,
     borderRadius: 20,
-    borderWidth: 1,
-    borderColor: colors.lightblue,
-    backgroundColor: colors.lightblue,
+    // borderWidth: 1,
+    // borderColor: colors.lightblue,
+    backgroundColor: "#D2E9FF",
     alignSelf: 'center',
     padding: 6,
-    marginTop: 20
+    marginTop: 15,
+    elevation: 2
   },
   calendarContainer: {
     borderTopWidth: 1.2,
@@ -89,5 +90,35 @@ export const styles = StyleSheet.create({
     lineHeight: 16.1,
     color: colors.primary,
     marginRight: 7
+  },
+  cardText: {
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    fontSize: 14,
+    lineHeight: 16.23,
+    color: colors.black,
+    marginVertical: 14
+  },
+  timeText: {
+    fontSize: 20,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    lineHeight: 23.23,
+    color: colors.primary,
+  },
+  workingHours: {
+    fontSize: 14,
+    lineHeight: 16.23,
+    color: colors.black,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+  },
+  subtimeText: {
+    fontSize: 10,
+    fontFamily: fonts.Medium,
+    fontWeight: "400",
+    lineHeight: 12,
+    color: colors.primary,
+    alignSelf: "center"
   },
 });

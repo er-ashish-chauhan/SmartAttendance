@@ -32,5 +32,12 @@ export const styles = StyleSheet.create({
         height: 1,
         backgroundColor: colors.primary,
         marginVertical: 16
+    },
+    answerText: {
+        fontFamily: fonts.Light,
+        // fontWeight: '400',
+        fontSize: 14,
+        lineHeight: 16.32,
+        color: colors.black,
     }
 });
